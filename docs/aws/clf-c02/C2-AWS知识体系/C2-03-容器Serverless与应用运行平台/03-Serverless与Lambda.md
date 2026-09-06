@@ -1,9 +1,9 @@
 ---
-id: 03-Serverless与Lambda-等
+id: 03-Serverless与Lambda
 sidebar_position: 3
 ---
 
-# C2-03-03-Serverless与Lambda与计算模式与责任边界对比与GlobalShop应用运行平台
+# C2-03-03-Serverless与Lambda
 
 > 本篇是《C2-03-容器Serverless与应用运行平台》的第3个分篇，主要包含：Serverless与Lambda、计算模式与责任边界对比、GlobalShop应用运行平台。
 
@@ -352,17 +352,13 @@ EC2
 → 可以长期运行 Server Process
 ```
 
-如果题目写：long-running persistent server。
-
-不要条件反射选 Lambda。
+如果题目写：long-running persistent server。不要条件反射选 Lambda。
 
 ---
 
 ### 7.13-【AWS-当前】【UPDATED】Lambda-产品已经继续扩展
 
-截至本章编写时，AWS 当前 Lambda 文档已经把 Lambda 描述为包含不同 Serverless Compute Primitive，其中除传统 Lambda。
-
-Functions 外，还出现了 Lambda MicroVMs 等新的运行形态。
+截至本章编写时，AWS 当前 Lambda 文档已经把 Lambda 描述为包含不同 Serverless Compute Primitive，其中除传统 Lambda Functions 外，还出现了 Lambda MicroVMs 等新的运行形态。
 
 但对本项目来说：CLF-C02 核心 + 719 题题库。
 
@@ -667,11 +663,5 @@ GlobalShop
 > 当前 Workload 的运行模型是什么？
 
 ---
-
-## 本篇概述
-
-- 本篇梳理了Serverless与Lambda相关的核心知识、适用场景与判断要点。
-- 本篇梳理了计算模式与责任边界对比相关的核心知识、适用场景与判断要点。
-- 本篇梳理了GlobalShop应用运行平台相关的核心知识、适用场景与判断要点。
 
 [返回本章总述](./00-总述.md)｜[查看本章概述](./99-概述.md)

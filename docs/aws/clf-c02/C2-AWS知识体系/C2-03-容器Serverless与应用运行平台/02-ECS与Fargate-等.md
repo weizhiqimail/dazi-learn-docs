@@ -67,14 +67,11 @@ AWS 当前把 ECS 定义为：
 拆开看：
 
 ```text
-Elastic
-= 弹性
+Elastic = 弹性
 
-Container
-= 容器
+Container = 容器
 
-Service
-= 服务
+Service = 服务
 ```
 
 核心不是“它能存 Container”。
@@ -718,9 +715,5 @@ Fargate
 
 ---
 
-## 本篇概述
-
-- 本篇梳理了ECS与Fargate相关的核心知识、适用场景与判断要点。
-- 本篇梳理了Kubernetes与EKS相关的核心知识、适用场景与判断要点。
 
 [返回本章总述](./00-总述.md)｜[查看本章概述](./99-概述.md)

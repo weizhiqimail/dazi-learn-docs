@@ -15,7 +15,6 @@
     "typecheck": "tsc",
     "check": "npm run typecheck && npm run build",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"scripts/**/*.mjs\" \"*.{ts,json}\" \".github/workflows/*.yml\" README.md",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"scripts/**/*.mjs\" \"*.{ts,json}\" \".github/workflows/*.yml\" README.md",
     "import:translations": "node scripts/import-translations-from-db.mjs"
   },
   "dependencies": {

@@ -110,31 +110,15 @@ ECS / EKS + Fargate
 
 ### 12.4-AWS-官方资料
 
-当前 CLF-C02 考试范围：[AWS 官方：CLF-C02 In-Scope AWS Services](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/clf-02-in-scope-services.html)。
-
-CLF-C02 Compute 考察要求：
-
-[AWS 官方：CLF-C02 Domain 3 - Cloud Technology and Services](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html)。
-
-Amazon ECS：
-
-[AWS 官方文档：What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)。
-
-Amazon ECR：
-
-[AWS 官方文档：What is Amazon Elastic Container Registry?](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)。
-
-Amazon EKS：[AWS 官方文档：What is Amazon EKS?](https://docs.aws.amazon.com/eks/latest/userguide/)。
-
-Kubernetes Concepts：
-
-[AWS 官方文档：Kubernetes concepts for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-concepts.html)。
-
-AWS Fargate：[AWS 官方文档：AWS Fargate with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/fargate.html)
-
-AWS Lambda：[AWS 官方文档：What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)。
-
-Elastic Beanstalk：[AWS 官方文档：What is AWS Elastic Beanstalk?](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)。
+- 当前 CLF-C02 考试范围：AWS 官方：CLF-C02 In-Scope AWS Services](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/clf-02-in-scope-services.html)。
+- CLF-C02 Compute 考察要求：[AWS 官方：CLF-C02 Domain 3 - Cloud Technology and Services](https://docs.aws.amazon.com/aws-certification/latest/cloud-practitioner-02/cloud-practitioner-02-domain3.html)。
+- Amazon ECS：[AWS 官方文档：What is Amazon Elastic Container Service?](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)。
+- Amazon ECR：[AWS 官方文档：What is Amazon Elastic Container Registry?](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html)。
+- Amazon EKS：[AWS 官方文档：What is Amazon EKS?](https://docs.aws.amazon.com/eks/latest/userguide/)。
+- Kubernetes Concepts：[AWS 官方文档：Kubernetes concepts for Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-concepts.html)。
+- AWS Fargate：[AWS 官方文档：AWS Fargate with Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/fargate.html)
+- AWS Lambda：[AWS 官方文档：What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)。
+- Elastic Beanstalk：[AWS 官方文档：What is AWS Elastic Beanstalk?](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)。
 
 ---
 
