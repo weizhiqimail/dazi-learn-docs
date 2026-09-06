@@ -1,0 +1,289 @@
+---
+id: 09-EC2-AMI与计算服务题-等
+sidebar_position: 9
+---
+
+# C4-03-EC2-AMI与计算服务题-EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题
+
+> 本篇是《C4-03-EC2-AMI与计算服务题》的第9个分篇，主要包含：EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题。
+
+## Q549-EC2-AMI与计算服务题
+
+**题目：** A company's employees are working from home. The company wants its employees to use their personal devices to connect to a managed workstation in the AWS Cloud. Which AWS service should the company use to provide the remote environment?
+
+**选项：**
+
+- A. Amazon Workspaces
+- B. AWS Cloud9
+- C. AWS Outposts
+- D. Amazon Lightsail
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**社区投票：** A 100%
+
+### Q549.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q549.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Workspaces | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为正确选项 |
+| B | AWS Cloud9 | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| C | AWS Outposts | AWS Outposts：把 AWS 基础设施和服务运行到客户本地场所。 | 题库记录为非正确选项 |
+| D | Amazon Lightsail | Amazon Lightsail：面向简单网站/小型应用的简化云平台与可预测套餐。 | 题库记录为非正确选项 |
+
+### Q549.3-为什么题库会这样选
+
+题库记录的正确选项定位为：该选项是题库中的概念/服务描述。
+
+现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q552-EC2-AMI与计算服务题
+
+**题目：** Which AWS service provides serverless compute for use with containers?。
+
+**选项：**
+
+- A. Amazon Simple Queue Service (Amazon SQS)
+- B. AWS Fargate
+- C. AWS Elastic Beanstalk
+- D. Amazon SageMaker
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `B`。
+
+**需求/考点标签：** Serverless / Container。
+
+**社区投票：** B 100%
+
+### Q552.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Serverless、Container**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q552.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Simple Queue Service (Amazon SQS) | Amazon SQS：托管消息队列，用于异步、缓冲和系统解耦。 | 题库记录为非正确选项 |
+| B | AWS Fargate | AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。 | 题库记录为正确选项 |
+| C | AWS Elastic Beanstalk | AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。 | 题库记录为非正确选项 |
+| D | Amazon SageMaker | Amazon SageMaker AI：构建、训练、部署和管理机器学习模型的平台。 | 题库记录为非正确选项 |
+
+### Q552.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q555-EC2-AMI与计算服务题
+
+**题目：** A company is planning to use the Amazon EC2 instances as web servers. Customers from around the world will use the web servers. Most customers will use the web servers only during certain hours of the day. How should the company deploy the EC2 instances to achieve the LOWEST operational cost?
+
+**选项：**
+
+- A. In multiple Availability Zones
+- B. In an Auto Scaling group
+- C. In a placement group
+- D. In private subnets
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `B`。
+
+**社区投票：** B 100%
+
+### Q555.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q555.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | In multiple Availability Zones | Availability Zone 是 Region 内相互隔离的故障域/部署位置。 | 题库记录为非正确选项 |
+| B | In an Auto Scaling group | EC2 Auto Scaling：根据需求自动增加或减少 EC2 容量。 | 题库记录为正确选项 |
+| C | In a placement group | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| D | In private subnets | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+
+### Q555.3-为什么题库会这样选
+
+题库记录的正确选项定位为：EC2 Auto Scaling：根据需求自动增加或减少 EC2 容量。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q590-EC2-AMI与计算服务题
+
+**题目：** A company wants to update its online data processing application by implementing container-based services that run for 4 hours at a time. The company does not want to provision or manage server instances. Which AWS service will meet these requirements?
+
+**选项：**
+
+- A. AWS Lambda
+- B. AWS Fargate
+- C. Amazon EC2
+- D. AWS Elastic Beanstalk
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `B`。
+
+**需求/考点标签：** Container。
+
+**社区投票：** B 75%, A 25%。
+
+### Q590.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Container**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q590.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | AWS Lambda | AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。 | 题库记录为非正确选项 |
+| B | AWS Fargate | AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。 | 题库记录为正确选项 |
+| C | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+| D | AWS Elastic Beanstalk | AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。 | 题库记录为非正确选项 |
+
+### Q590.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q594-EC2-AMI与计算服务题
+
+**题目：** A developer who has no AWS Cloud experience wants to use AWS technology to build a web application. Which AWS service should the developer use to start building the application?。
+
+**选项：**
+
+- A. Amazon SageMaker
+- B. AWS Lambda
+- C. Amazon Lightsail
+- D. Amazon Elastic Container Service (Amazon ECS)
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `C`。
+
+**社区投票：** C 100%
+
+### Q594.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q594.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon SageMaker | Amazon SageMaker AI：构建、训练、部署和管理机器学习模型的平台。 | 题库记录为非正确选项 |
+| B | AWS Lambda | AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。 | 题库记录为非正确选项 |
+| C | Amazon Lightsail | Amazon Lightsail：面向简单网站/小型应用的简化云平台与可预测套餐。 | 题库记录为正确选项 |
+| D | Amazon Elastic Container Service (Amazon ECS) | Amazon ECS：AWS 原生托管容器编排服务。 | 题库记录为非正确选项 |
+
+### Q594.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon Lightsail：面向简单网站/小型应用的简化云平台与可预测套餐。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q621-EC2-AMI与计算服务题
+
+**题目：** What is a benefit of using an Elastic Load Balancing (ELB) load balancer with applications running in the AWS Cloud?。
+
+**选项：**
+
+- A. An ELB will automatically scale resources to meet capacity needs.
+- B. An ELB can balance traffic across multiple compute resources.
+- C. An ELB can span multiple AWS Regions.
+- D. An ELB can balance traffic between multiple internet gateways.
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `B`。
+
+**社区投票：** B 100%
+
+### Q621.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q621.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | An ELB will automatically scale resources to meet capacity needs. | 可扩展性关注系统承载更大规模工作负载的能力。 | 题库记录为非正确选项 |
+| B | An ELB can balance traffic across multiple compute resources. | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为正确选项 |
+| C | An ELB can span multiple AWS Regions. | Region 是 AWS 独立的地理区域，内部包含多个 Availability Zone。 | 题库记录为非正确选项 |
+| D | An ELB can balance traffic between multiple internet gateways. | Internet Gateway：VPC 与公网 Internet 之间的网关组件。 | 题库记录为非正确选项 |
+
+### Q621.3-为什么题库会这样选
+
+题库记录的正确选项定位为：该选项是题库中的概念/服务描述。
+
+现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+## 本篇概述
+
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+
+[返回本章总述](./00-总述.md)｜[查看本章概述](./99-概述.md)

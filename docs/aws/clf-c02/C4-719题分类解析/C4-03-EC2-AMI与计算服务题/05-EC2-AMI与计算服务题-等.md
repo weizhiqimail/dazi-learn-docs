@@ -1,0 +1,349 @@
+---
+id: 05-EC2-AMI与计算服务题-等
+sidebar_position: 5
+---
+
+# C4-03-EC2-AMI与计算服务题-EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题
+
+> 本篇是《C4-03-EC2-AMI与计算服务题》的第5个分篇，主要包含：EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题。
+
+## Q323-EC2-AMI与计算服务题
+
+**题目：** A company needs to deploy applications in the AWS Cloud as quickly as possible. The company also needs to minimize the complexity that is related to the management of AWS resources. Which AWS service should the company use to meet these requirements?
+
+**选项：**
+
+- A. AWS Config
+- B. AWS Elastic Beanstalk
+- C. Amazon EC2
+- D. Amazon Personalize
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `B`。
+
+**社区投票：** B 100%
+
+### Q323.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q323.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | AWS Config | AWS Config：记录资源配置与变化，并可按规则检查配置合规性。 | 题库记录为非正确选项 |
+| B | AWS Elastic Beanstalk | AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。 | 题库记录为正确选项 |
+| C | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+| D | Amazon Personalize | Amazon Personalize：托管个性化推荐服务。项目资料提示当前考试范围需复核。 | 题库记录为非正确选项 |
+
+### Q323.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+### Q323.4-⚠-争议/版本提示
+
+- 涉及项目资料已提示需关注当前状态的词：amazon personalize。
+- 本题同时收录到 `C4-27-旧题争议题与当前AWS差异.md`，不在这里强行替题库修正答案。
+
+---
+
+---
+
+## Q329-EC2-AMI与计算服务题
+
+**题目：** A company wants to use application stacks to run a workload in the AWS Cloud. The company wants to use pre-configured instances. Which AWS service will meet these requirements?。
+
+**选项：**
+
+- A. Amazon Lightsail
+- B. Amazon Athena
+- C. AWS Outposts
+- D. Amazon EC2
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**需求/考点标签：** Configuration Compliance。
+
+**社区投票：** A 100%
+
+### Q329.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Configuration Compliance**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q329.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Lightsail | Amazon Lightsail：面向简单网站/小型应用的简化云平台与可预测套餐。 | 题库记录为正确选项 |
+| B | Amazon Athena | Amazon Athena：Serverless 交互式 SQL 查询服务，典型为直接查询 S3 数据。 | 题库记录为非正确选项 |
+| C | AWS Outposts | AWS Outposts：把 AWS 基础设施和服务运行到客户本地场所。 | 题库记录为非正确选项 |
+| D | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+
+### Q329.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon Lightsail：面向简单网站/小型应用的简化云平台与可预测套餐。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q330-EC2-AMI与计算服务题
+
+**题目：** Which AWS services are supported by Savings Plans? (Choose two.)。
+
+**选项：**
+
+- A. Amazon EC2
+- B. Amazon RDS
+- C. Amazon SageMaker
+- D. Amazon Redshift
+- E. Amazon DynamoDB
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `AC`。
+
+**需求/考点标签：** Cost Optimization。
+
+**社区投票：** AC 93%, AE 7%。
+
+### Q330.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Cost Optimization**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q330.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为正确选项 |
+| B | Amazon RDS | Amazon RDS：托管关系数据库服务，负责大量数据库基础设施运维。 | 题库记录为非正确选项 |
+| C | Amazon SageMaker | Amazon SageMaker AI：构建、训练、部署和管理机器学习模型的平台。 | 题库记录为正确选项 |
+| D | Amazon Redshift | Amazon Redshift：托管云数据仓库，用于大规模分析型查询。 | 题库记录为非正确选项 |
+| E | Amazon DynamoDB | Amazon DynamoDB：Serverless NoSQL Key-Value/Document 数据库，适合高规模、低延迟访问。 | 题库记录为非正确选项 |
+
+### Q330.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。
+
+Amazon SageMaker AI：构建、训练、部署和管理机器学习模型的平台。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q346-EC2-AMI与计算服务题
+
+**题目：** A company launched an Amazon EC2 instance with the latest Amazon Linux 2 Amazon Machine Image (AMI). Which actions can a system administrator take to connect to the EC2 instance? (Choose two.)。
+
+**选项：**
+
+- A. Use Amazon EC2 Instance Connect.
+- B. Use a Remote Desktop Protocol (RDP) connection.
+- C. Use AWS Batch.
+- D. Use AWS Systems Manager Session Manager.
+- E. Use Amazon Connect.
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `AD`。
+
+**社区投票：** AD 100%
+
+### Q346.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q346.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Use Amazon EC2 Instance Connect. | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为正确选项 |
+| B | Use a Remote Desktop Protocol (RDP) connection. | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| C | Use AWS Batch. | AWS Batch：托管批处理作业调度与计算资源供给。 | 题库记录为非正确选项 |
+| D | Use AWS Systems Manager Session Manager. | AWS Systems Manager：集中运维和自动化管理 AWS/混合环境中的节点与资源。 | 题库记录为正确选项 |
+| E | Use Amazon Connect. | Amazon Connect：云联络中心服务。 | 题库记录为非正确选项 |
+
+### Q346.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。
+
+AWS Systems Manager：集中运维和自动化管理 AWS/混合环境中的节点与资源。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q361-EC2-AMI与计算服务题
+
+**题目：** Which of the following AWS services are serverless? (Choose two.)。
+
+**选项：**
+
+- A. AWS Outposts
+- B. Amazon EC2
+- C. Amazon Elastic Kubernetes Service (Amazon EKS)
+- D. AWS Fargate
+- E. AWS Lambda
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `DE`。
+
+**需求/考点标签：** Serverless。
+
+**社区投票：** DE 100%
+
+### Q361.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Serverless**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q361.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | AWS Outposts | AWS Outposts：把 AWS 基础设施和服务运行到客户本地场所。 | 题库记录为非正确选项 |
+| B | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+| C | Amazon Elastic Kubernetes Service (Amazon EKS) | Amazon EKS：AWS 托管 Kubernetes 控制面。 | 题库记录为非正确选项 |
+| D | AWS Fargate | AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。 | 题库记录为正确选项 |
+| E | AWS Lambda | AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。 | 题库记录为正确选项 |
+
+### Q361.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。
+
+AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q363-EC2-AMI与计算服务题
+
+**题目：** A solutions architect needs to maintain a fleet of Amazon EC2 instances so that any impaired instances are replaced with new ones. Which AWS service should the solutions architect use?。
+
+**选项：**
+
+- A. Amazon Elastic Container Service (Amazon ECS)
+- B. Amazon GuardDuty
+- C. AWS Shield
+- D. AWS Auto Scaling
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `D`。
+
+**社区投票：** D 100%
+
+### Q363.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q363.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Elastic Container Service (Amazon ECS) | Amazon ECS：AWS 原生托管容器编排服务。 | 题库记录为非正确选项 |
+| B | Amazon GuardDuty | Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。 | 题库记录为非正确选项 |
+| C | AWS Shield | AWS Shield：AWS DDoS 防护服务。 | 题库记录为非正确选项 |
+| D | AWS Auto Scaling | EC2 Auto Scaling：根据需求自动增加或减少 EC2 容量。 | 题库记录为正确选项 |
+
+### Q363.3-为什么题库会这样选
+
+题库记录的正确选项定位为：EC2 Auto Scaling：根据需求自动增加或减少 EC2 容量。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q366-EC2-AMI与计算服务题
+
+**题目：** Which AWS service supports the deployment and management of applications in the AWS Cloud?。
+
+**选项：**
+
+- A. Amazon CodeGuru
+- B. AWS Fargate
+- C. AWS CodeCommit
+- D. AWS Elastic Beanstalk
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `D`。
+
+**社区投票：** D 100%
+
+### Q366.1-题干怎么拆
+
+现有题库没有提供独立 explanation。
+
+这里按题干中的动作、对象和所有选项的服务定位进行比较。
+
+### Q366.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon CodeGuru | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| B | AWS Fargate | AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。 | 题库记录为非正确选项 |
+| C | AWS CodeCommit | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| D | AWS Elastic Beanstalk | AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。 | 题库记录为正确选项 |
+
+### Q366.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+## 本篇概述
+
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+
+[返回本章总述](./00-总述.md)｜[查看本章概述](./99-概述.md)

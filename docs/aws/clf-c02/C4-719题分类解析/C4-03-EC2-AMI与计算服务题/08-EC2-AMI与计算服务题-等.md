@@ -1,0 +1,300 @@
+---
+id: 08-EC2-AMI与计算服务题-等
+sidebar_position: 8
+---
+
+# C4-03-EC2-AMI与计算服务题-EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题与EC2-AMI与计算服务题
+
+> 本篇是《C4-03-EC2-AMI与计算服务题》的第8个分篇，主要包含：EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题、EC2-AMI与计算服务题。
+
+## Q464-EC2-AMI与计算服务题
+
+**题目：** A company wants to use a serverless compute service for an application. Which AWS service will meet this requirement?。
+
+**选项：**
+
+- A. AWS Lambda
+- B. AWS CloudFormation
+- C. AWS Elastic Beanstalk
+- D. Elastic Load Balancing
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**需求/考点标签：** Serverless。
+
+**社区投票：** A 100%
+
+### Q464.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Serverless**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q464.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | AWS Lambda | AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。 | 题库记录为正确选项 |
+| B | AWS CloudFormation | AWS CloudFormation：AWS Infrastructure as Code，用模板声明和部署资源。 | 题库记录为非正确选项 |
+| C | AWS Elastic Beanstalk | AWS Elastic Beanstalk：托管应用部署平台，帮助创建和管理常见 Web 应用运行环境。 | 题库记录为非正确选项 |
+| D | Elastic Load Balancing | Elastic Load Balancing：在多个后端目标间分发流量并提高可用性。 | 题库记录为非正确选项 |
+
+### Q464.3-为什么题库会这样选
+
+题库记录的正确选项定位为：AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q467-EC2-AMI与计算服务题
+
+**题目：** A company plans to migrate its custom marketing application and order-processing application to AWS. The company needs to deploy the applications on different types of instances with various configurations of CPU, memory, storage, and networking capacity. Which AWS service should the company use to meet these requirements?
+
+**选项：**
+
+- A. AWS Lambda
+- B. Amazon Cognito
+- C. Amazon Athena
+- D. Amazon EC2
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `D`。
+
+**需求/考点标签：** Migration / Configuration Compliance。
+
+**社区投票：** D 100%
+
+### Q467.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Migration、Configuration Compliance**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q467.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | AWS Lambda | AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。 | 题库记录为非正确选项 |
+| B | Amazon Cognito | Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。 | 题库记录为非正确选项 |
+| C | Amazon Athena | Amazon Athena：Serverless 交互式 SQL 查询服务，典型为直接查询 S3 数据。 | 题库记录为非正确选项 |
+| D | Amazon EC2 | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为正确选项 |
+
+### Q467.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+### Q467.4-⚠-争议/版本提示
+
+- 社区评论存在明显质疑/版本差异信号
+- 本题同时收录到 `C4-27-旧题争议题与当前AWS差异.md`，不在这里强行替题库修正答案。
+
+---
+
+---
+
+## Q472-EC2-AMI与计算服务题
+
+**题目：** A company wants its Amazon EC2 instances to operate in a highly available environment, even if there is a natural disaster in a particular geographic area. Which solution achieves this goal?。
+
+**选项：**
+
+- A. Use EC2 instances in multiple AWS Regions.
+- B. Use EC2 instances in multiple edge locations.
+- C. Use EC2 instances in the same Availability Zone but in different AWS Regions.
+- D. Use Amazon CloudFront with the EC2 instances configured as the source.
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**需求/考点标签：** High Availability。
+
+**社区投票：** A 100%
+
+### Q472.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**High Availability**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q472.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Use EC2 instances in multiple AWS Regions. | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为正确选项 |
+| B | Use EC2 instances in multiple edge locations. | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+| C | Use EC2 instances in the same Availability Zone but in different AWS Regions. | Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+| D | Use Amazon CloudFront with the EC2 instances configured as the source. | Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+
+### Q472.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q492-EC2-AMI与计算服务题
+
+**题目：** Which AWS compute service gives users the ability to securely and reliably run containers at scale?。
+
+**选项：**
+
+- A. Amazon Elastic Container Service (Amazon ECS)
+- B. Amazon Aurora
+- C. Amazon Athena
+- D. Amazon Polly
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**需求/考点标签：** Container。
+
+**社区投票：** A 100%
+
+### Q492.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Container**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q492.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Elastic Container Service (Amazon ECS) | Amazon ECS：AWS 原生托管容器编排服务。 | 题库记录为正确选项 |
+| B | Amazon Aurora | Amazon Aurora：AWS 云原生关系数据库，兼容 MySQL/PostgreSQL 生态，强调高性能与高可用。 | 题库记录为非正确选项 |
+| C | Amazon Athena | Amazon Athena：Serverless 交互式 SQL 查询服务，典型为直接查询 S3 数据。 | 题库记录为非正确选项 |
+| D | Amazon Polly | Amazon Polly：Text-to-Speech，文本转自然语音。 | 题库记录为非正确选项 |
+
+### Q492.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Amazon ECS：AWS 原生托管容器编排服务。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q494-EC2-AMI与计算服务题
+
+**题目：** A company runs an application on AWS that performs batch jobs. The application is fault-tolerant and can handle interruptions. The company wants to optimize the cost to run the application. Which AWS offering will meet these requirements?
+
+**选项：**
+
+- A. Amazon Macie
+- B. Amazon Neptune
+- C. Amazon EC2 Spot Instances
+- D. Amazon EC2 On-Demand Instances
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `C`。
+
+**需求/考点标签：** 可中断低成本计算。
+
+**社区投票：** C 100%
+
+### Q494.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**可中断低成本计算**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q494.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Amazon Macie | Amazon Macie：发现和保护 S3 中的敏感数据。 | 题库记录为非正确选项 |
+| B | Amazon Neptune | Amazon Neptune：托管图数据库，适合关系网络和图遍历场景。 | 题库记录为非正确选项 |
+| C | Amazon EC2 Spot Instances | Spot Instances：利用 AWS 闲置计算容量的低价实例，但可能被中断。Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为正确选项 |
+| D | Amazon EC2 On-Demand Instances | On-Demand Instances：无长期承诺、按使用付费的计算购买方式。Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。 | 题库记录为非正确选项 |
+
+### Q494.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Spot Instances：利用 AWS 闲置计算容量的低价实例，但可能被中断。
+
+Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+---
+
+## Q542-EC2-AMI与计算服务题
+
+**题目：** An ecommerce company wants to distribute traffic between the Amazon EC2 instances that host its website. Which AWS service or resource will meet these requirements?。
+
+**选项：**
+
+- A. Application Load Balancer
+- B. AWS WAF
+- C. AWS CloudHSM
+- D. AWS Direct Connect
+
+**主分类：** C4-03 EC2-AMI与计算服务题。
+
+**题库记录答案：** `A`。
+
+**需求/考点标签：** Block Storage。
+
+**社区投票：** A 100%
+
+### Q542.1-题干怎么拆
+
+这道题先识别的不是某个服务名，而是这些约束：**Block Storage**。
+
+判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。
+
+### Q542.2-每个选项的定位
+
+| 选项 | 题库内容 | 服务/概念定位 | 题库答案关系 |
+|---|---|---|---|
+| A | Application Load Balancer | Elastic Load Balancing：在多个后端目标间分发流量并提高可用性。 | 题库记录为正确选项 |
+| B | AWS WAF | AWS WAF：Web 应用防火墙，过滤 HTTP(S) Web 请求。 | 题库记录为非正确选项 |
+| C | AWS CloudHSM | 该选项是题库中的概念/服务描述。现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。 | 题库记录为非正确选项 |
+| D | AWS Direct Connect | AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。 | 题库记录为非正确选项 |
+
+### Q542.3-为什么题库会这样选
+
+题库记录的正确选项定位为：Elastic Load Balancing：在多个后端目标间分发流量并提高可用性。
+
+它与题干要求的对象/约束直接对应。
+
+其余选项虽然可能也属于同一大类，但主要解决不同问题。
+
+---
+
+## 本篇概述
+
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+- 本篇梳理了EC2-AMI与计算服务题相关的核心知识、适用场景与判断要点。
+
+[返回本章总述](./00-总述.md)｜[查看本章概述](./99-概述.md)
