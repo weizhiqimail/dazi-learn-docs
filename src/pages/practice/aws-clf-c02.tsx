@@ -1,0 +1,1 @@
+import React from'react';import Layout from'@theme/Layout';import QuizEngine from'../../components/QuizEngine';export default function Page(){return <Layout title="AWS-CLF-C02做题模式" description="中英文AWS云从业者练习题"><main><QuizEngine src="/data/aws-clf-c02.json" title="AWS-CLF-C02做题模式"/></main></Layout>}
