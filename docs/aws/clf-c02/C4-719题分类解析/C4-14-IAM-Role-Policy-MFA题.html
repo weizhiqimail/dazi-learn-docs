@@ -1,0 +1,1094 @@
+<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>C4-14-IAM-Role-Policy-MFA题 | Dazi-Learn-Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题 /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="C4-14-IAM-Role-Policy-MFA题 | Dazi-Learn-Docs"/><meta data-rh=true name=description content="资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 correct_answer、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 [UPDATED]、[LEGACY]、[CURRENT-OUT-OF-SCOPE] 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。"/><meta data-rh=true property=og:description content="资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 correct_answer、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 [UPDATED]、[LEGACY]、[CURRENT-OUT-OF-SCOPE] 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。"/><link data-rh=true rel=icon href=/dazi-learn-docs/img/favicon.ico /><link data-rh=true rel=canonical href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题 /><link data-rh=true rel=alternate href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题 hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题 hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02","name":"CLF-C02云从业者","position":1},{"@type":"ListItem","item":"https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题","name":"C4-14-IAM-Role-Policy-MFA题","position":2}]}</script><link rel=stylesheet href=/dazi-learn-docs/assets/css/styles.ba2d3fd6.css /><script src=/dazi-learn-docs/assets/js/runtime~main.da108f3c.js defer></script><script src=/dazi-learn-docs/assets/js/main.323e40cb.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-53e")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/dazi-learn-docs/img/logo.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/dazi-learn-docs/><div class=navbar__logo><img src=/dazi-learn-docs/img/logo.svg alt=Dazi-Learn-Docs class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/dazi-learn-docs/img/logo.svg alt=Dazi-Learn-Docs class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Dazi-Learn-Docs</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/dazi-learn-docs/docs/aws/clf-c02>知识模块</a><a class="navbar__item navbar__link" href=/dazi-learn-docs/practice/aws-clf-c02>练习中心</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/dazi-learn-docs/docs/aws/clf-c02><span class=categoryLinkLabel_W154>AWS</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02><span class=categoryLinkLabel_W154>CLF-C02云从业者</span></a><button aria-label="折叠侧边栏分类 'CLF-C02云从业者'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C1-总述/C1-01-阅读说明与资料来源><span class=categoryLinkLabel_W154>C1-总述</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C2-AWS知识体系/C2-01-云计算核心概念与全球基础设施><span class=categoryLinkLabel_W154>C2-AWS知识体系</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C3-架构与业务场景/C3-01-GlobalShop完整基础架构><span class=categoryLinkLabel_W154>C3-架构与业务场景</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-00-719题索引与分类规则><span class=categoryLinkLabel_W154>C4-719题分类解析</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-00-719题索引与分类规则><span class=linkLabel_WmDU>C4-00-719题索引与分类规则</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-01-云计算价值与基础概念题><span class=linkLabel_WmDU>C4-01-云计算价值与基础概念题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-02-Region-AZ-高可用与灾备题><span class=linkLabel_WmDU>C4-02-Region-AZ-高可用与灾备题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-03-EC2-AMI与计算服务题><span class=linkLabel_WmDU>C4-03-EC2-AMI与计算服务题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-04-EC2计费与容量选择题><span class=linkLabel_WmDU>C4-04-EC2计费与容量选择题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-05-S3对象存储与Storage-Class题><span class=linkLabel_WmDU>C4-05-S3对象存储与Storage-Class题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-06-EBS-EFS-FSx与存储对比题><span class=linkLabel_WmDU>C4-06-EBS-EFS-FSx与存储对比题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-07-Storage-Gateway-Backup-Snow题><span class=linkLabel_WmDU>C4-07-Storage-Gateway-Backup-Snow题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-08-RDS-Aurora与关系数据库题><span class=linkLabel_WmDU>C4-08-RDS-Aurora与关系数据库题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-09-DynamoDB-NoSQL-缓存与数据库选择题><span class=linkLabel_WmDU>C4-09-DynamoDB-NoSQL-缓存与数据库选择题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-10-VPC-Subnet-路由与基础网络题><span class=linkLabel_WmDU>C4-10-VPC-Subnet-路由与基础网络题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-11-Gateway-Endpoint-Peering-PrivateLink题><span class=linkLabel_WmDU>C4-11-Gateway-Endpoint-Peering-PrivateLink题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题><span class=linkLabel_WmDU>C4-12-DirectConnect-VPN-TransitGateway题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-13-Route53-CloudFront与全球网络题><span class=linkLabel_WmDU>C4-13-Route53-CloudFront与全球网络题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题><span class=linkLabel_WmDU>C4-14-IAM-Role-Policy-MFA题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-15-Shared-Responsibility题><span class=linkLabel_WmDU>C4-15-Shared-Responsibility题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-16-KMS-Secrets-加密与凭证题><span class=linkLabel_WmDU>C4-16-KMS-Secrets-加密与凭证题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-17-GuardDuty-Inspector-Macie等安全题><span class=linkLabel_WmDU>C4-17-GuardDuty-Inspector-Macie等安全题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-18-WAF-Shield与网络安全题><span class=linkLabel_WmDU>C4-18-WAF-Shield与网络安全题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-19-CloudWatch-CloudTrail-Config题><span class=linkLabel_WmDU>C4-19-CloudWatch-CloudTrail-Config题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-20-Organizations-治理-IaC题><span class=linkLabel_WmDU>C4-20-Organizations-治理-IaC题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-21-SQS-SNS-EventBridge应用集成题><span class=linkLabel_WmDU>C4-21-SQS-SNS-EventBridge应用集成题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-22-Migration与Hybrid-Cloud题><span class=linkLabel_WmDU>C4-22-Migration与Hybrid-Cloud题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-23-Analytics-AI-ML-IoT题><span class=linkLabel_WmDU>C4-23-Analytics-AI-ML-IoT题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-24-Cost-Billing-Pricing题><span class=linkLabel_WmDU>C4-24-Cost-Billing-Pricing题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-25-AWS-Support与客户资源题><span class=linkLabel_WmDU>C4-25-AWS-Support与客户资源题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-26-CAF-Well-Architected题><span class=linkLabel_WmDU>C4-26-CAF-Well-Architected题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-27-旧题争议题与当前AWS差异><span class=linkLabel_WmDU>C4-27-旧题、争议题与当前-AWS-差异</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4><span class=linkLabel_WmDU>C4-719题分类解析</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C5-频率统计与强化/C5-01-统计方法与分类规则><span class=categoryLinkLabel_W154>C5-频率统计与强化</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C6-总结与考前复习/C6-01-AWS完整架构总图><span class=categoryLinkLabel_W154>C6-总结与考前复习</span></a></div></ul></ul></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/dazi-learn-docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>AWS</span><li class=breadcrumbs__item><a class=breadcrumbs__link href=/dazi-learn-docs/docs/aws/clf-c02><span>CLF-C02云从业者</span></a><li class=breadcrumbs__item><span class=breadcrumbs__link>C4-719题分类解析</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>C4-14-IAM-Role-Policy-MFA题</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>C4-14-IAM-Role-Policy-MFA题</h1></header>
+<blockquote>
+<p>资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 <code>correct_answer</code>、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 <code>[UPDATED]</code>、<code>[LEGACY]</code>、<code>[CURRENT-OUT-OF-SCOPE]</code> 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。</p>
+</blockquote>
+<p>本文件共收录 <strong>54</strong> 道主分类题。范围：IAM、User/Group/Role/Policy、MFA、Identity Center、Cognito、SCP。</p>
+<blockquote>
+<p>注意：这里的“正确”指题库 <code>correct_answer</code> 记录。若题目存在明显争议/历史差异，会明确标记并同时收入 C4-27。</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q26-iam-role-policy-mfa题>Q26-IAM-Role-Policy-MFA题<a href=#q26-iam-role-policy-mfa题 class=hash-link aria-label=Q26-IAM-Role-Policy-MFA题的直接链接 title=Q26-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes. Which AWS service or tool will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM Access Analyzer</li>
+<li class="">B. AWS Artifact</li>
+<li class="">C. IAM credential report</li>
+<li class="">D. AWS Audit Manager</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> 配置变化与合规；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q261-题干怎么拆>Q26.1-题干怎么拆<a href=#q261-题干怎么拆 class=hash-link aria-label=Q26.1-题干怎么拆的直接链接 title=Q26.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>配置变化与合规</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q262-每个选项的定位>Q26.2-每个选项的定位<a href=#q262-每个选项的定位 class=hash-link aria-label=Q26.2-每个选项的定位的直接链接 title=Q26.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>AWS Artifact<td>AWS Artifact：按需访问 AWS 合规报告和部分协议的门户。<td>题库记录为非正确选项<tr><td>C<td>IAM credential report<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Audit Manager<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q263-为什么题库会这样选>Q26.3-为什么题库会这样选<a href=#q263-为什么题库会这样选 class=hash-link aria-label=Q26.3-为什么题库会这样选的直接链接 title=Q26.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q36-iam-role-policy-mfa题>Q36-IAM-Role-Policy-MFA题<a href=#q36-iam-role-policy-mfa题 class=hash-link aria-label=Q36-IAM-Role-Policy-MFA题的直接链接 title=Q36-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Service Catalog</li>
+<li class="">B. AWS Systems Manager</li>
+<li class="">C. AWS IAM Access Analyzer</li>
+<li class="">D. AWS Organizations</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Object Storage；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q361-题干怎么拆>Q36.1-题干怎么拆<a href=#q361-题干怎么拆 class=hash-link aria-label=Q36.1-题干怎么拆的直接链接 title=Q36.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Object Storage</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q362-每个选项的定位>Q36.2-每个选项的定位<a href=#q362-每个选项的定位 class=hash-link aria-label=Q36.2-每个选项的定位的直接链接 title=Q36.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Service Catalog<td>AWS Service Catalog：让企业发布经过批准的云产品/基础设施模板目录。<td>题库记录为非正确选项<tr><td>B<td>AWS Systems Manager<td>AWS Systems Manager：集中运维和自动化管理 AWS/混合环境中的节点与资源。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Organizations<td>AWS Organizations：集中组织和治理多个 AWS Account，并支持 Consolidated Billing、SCP 等。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q363-为什么题库会这样选>Q36.3-为什么题库会这样选<a href=#q363-为什么题库会这样选 class=hash-link aria-label=Q36.3-为什么题库会这样选的直接链接 title=Q36.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q39-iam-role-policy-mfa题>Q39-IAM-Role-Policy-MFA题<a href=#q39-iam-role-policy-mfa题 class=hash-link aria-label=Q39-IAM-Role-Policy-MFA题的直接链接 title=Q39-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is setting up AWS Identity and Access Management (IAM) on an AWS account. Which recommendation complies with IAM security best practices?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Use the account root user access keys for administrative tasks.</li>
+<li class="">B. Grant broad permissions so that all company employees can access the resources they need.</li>
+<li class="">C. Turn on multi-factor authentication (MFA) for added security during the login process.</li>
+<li class="">D. Avoid rotating credentials to prevent issues in production applications.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q391-题干怎么拆>Q39.1-题干怎么拆<a href=#q391-题干怎么拆 class=hash-link aria-label=Q39.1-题干怎么拆的直接链接 title=Q39.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q392-每个选项的定位>Q39.2-每个选项的定位<a href=#q392-每个选项的定位 class=hash-link aria-label=Q39.2-每个选项的定位的直接链接 title=Q39.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Use the account root user access keys for administrative tasks.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>B<td>Grant broad permissions so that all company employees can access the resources they need.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>C<td>Turn on multi-factor authentication (MFA) for added security during the login process.<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项<tr><td>D<td>Avoid rotating credentials to prevent issues in production applications.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q393-为什么题库会这样选>Q39.3-为什么题库会这样选<a href=#q393-为什么题库会这样选 class=hash-link aria-label=Q39.3-为什么题库会这样选的直接链接 title=Q39.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：MFA：多因素认证，增强账号登录安全。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q52-iam-role-policy-mfa题>Q52-IAM-Role-Policy-MFA题<a href=#q52-iam-role-policy-mfa题 class=hash-link aria-label=Q52-IAM-Role-Policy-MFA题的直接链接 title=Q52-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is developing an application that uses multiple AWS services. The application needs to use temporary, limited- privilege credentials for authentication with other AWS APIs. Which AWS service or feature should the company use to meet these authentication requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon API Gateway</li>
+<li class="">B. IAM users</li>
+<li class="">C. AWS Security Token Service (AWS STS)</li>
+<li class="">D. IAM instance profiles</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q521-题干怎么拆>Q52.1-题干怎么拆<a href=#q521-题干怎么拆 class=hash-link aria-label=Q52.1-题干怎么拆的直接链接 title=Q52.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q522-每个选项的定位>Q52.2-每个选项的定位<a href=#q522-每个选项的定位 class=hash-link aria-label=Q52.2-每个选项的定位的直接链接 title=Q52.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon API Gateway<td>Amazon API Gateway：托管 API 前门，用于发布、保护和管理 API。<td>题库记录为非正确选项<tr><td>B<td>IAM users<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Security Token Service (AWS STS)<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>IAM instance profiles<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q523-为什么题库会这样选>Q52.3-为什么题库会这样选<a href=#q523-为什么题库会这样选 class=hash-link aria-label=Q52.3-为什么题库会这样选的直接链接 title=Q52.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q54-iam-role-policy-mfa题>Q54-IAM-Role-Policy-MFA题<a href=#q54-iam-role-policy-mfa题 class=hash-link aria-label=Q54-IAM-Role-Policy-MFA题的直接链接 title=Q54-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service is always provided at no charge?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon S3</li>
+<li class="">B. AWS Identity and Access Management (IAM)</li>
+<li class="">C. Elastic Load Balancers</li>
+<li class="">D. AWS WAF</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 94%, A 6%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q541-题干怎么拆>Q54.1-题干怎么拆<a href=#q541-题干怎么拆 class=hash-link aria-label=Q54.1-题干怎么拆的直接链接 title=Q54.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q542-每个选项的定位>Q54.2-每个选项的定位<a href=#q542-每个选项的定位 class=hash-link aria-label=Q54.2-每个选项的定位的直接链接 title=Q54.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon S3<td>Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。<td>题库记录为非正确选项<tr><td>B<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Elastic Load Balancers<td>Elastic Load Balancing：在多个后端目标间分发流量并提高可用性。<td>题库记录为非正确选项<tr><td>D<td>AWS WAF<td>AWS WAF：Web 应用防火墙，过滤 HTTP(S) Web 请求。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q543-为什么题库会这样选>Q54.3-为什么题库会这样选<a href=#q543-为什么题库会这样选 class=hash-link aria-label=Q54.3-为什么题库会这样选的直接链接 title=Q54.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q94-iam-role-policy-mfa题>Q94-IAM-Role-Policy-MFA题<a href=#q94-iam-role-policy-mfa题 class=hash-link aria-label=Q94-IAM-Role-Policy-MFA题的直接链接 title=Q94-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Using AWS Identity and Access Management (IAM) to grant access only to the resources needed to perform a task is a concept known as:</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. restricted access.</li>
+<li class="">B. as-needed access.</li>
+<li class="">C. least privilege access.</li>
+<li class="">D. token access.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 92%, D 8%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q941-题干怎么拆>Q94.1-题干怎么拆<a href=#q941-题干怎么拆 class=hash-link aria-label=Q94.1-题干怎么拆的直接链接 title=Q94.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q942-每个选项的定位>Q94.2-每个选项的定位<a href=#q942-每个选项的定位 class=hash-link aria-label=Q94.2-每个选项的定位的直接链接 title=Q94.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>restricted access.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>as-needed access.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>C<td>least privilege access.<td>最小权限原则要求只授予完成任务所需的最少权限。<td>题库记录为正确选项<tr><td>D<td>token access.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q943-为什么题库会这样选>Q94.3-为什么题库会这样选<a href=#q943-为什么题库会这样选 class=hash-link aria-label=Q94.3-为什么题库会这样选的直接链接 title=Q94.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：最小权限原则要求只授予完成任务所需的最少权限。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q98-iam-role-policy-mfa题>Q98-IAM-Role-Policy-MFA题<a href=#q98-iam-role-policy-mfa题 class=hash-link aria-label=Q98-IAM-Role-Policy-MFA题的直接链接 title=Q98-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to grant users in one AWS account access to resources in another AWS account. The users do not currently have permission to access the resources. Which AWS service will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM group</li>
+<li class="">B. IAM role</li>
+<li class="">C. IAM tag</li>
+<li class="">D. IAM Access Analyzer</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 91%, A 9%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q981-题干怎么拆>Q98.1-题干怎么拆<a href=#q981-题干怎么拆 class=hash-link aria-label=Q98.1-题干怎么拆的直接链接 title=Q98.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q982-每个选项的定位>Q98.2-每个选项的定位<a href=#q982-每个选项的定位 class=hash-link aria-label=Q98.2-每个选项的定位的直接链接 title=Q98.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM group<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>IAM role<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>IAM tag<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>IAM Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q983-为什么题库会这样选>Q98.3-为什么题库会这样选<a href=#q983-为什么题库会这样选 class=hash-link aria-label=Q98.3-为什么题库会这样选的直接链接 title=Q98.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q984--争议版本提示>Q98.4-⚠-争议/版本提示<a href=#q984--争议版本提示 class=hash-link aria-label=Q98.4-⚠-争议/版本提示的直接链接 title=Q98.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区评论存在明显质疑/版本差异信号</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q99-iam-role-policy-mfa题>Q99-IAM-Role-Policy-MFA题<a href=#q99-iam-role-policy-mfa题 class=hash-link aria-label=Q99-IAM-Role-Policy-MFA题的直接链接 title=Q99-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which task is the responsibility of AWS when using AWS services?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Management of IAM user permissions</li>
+<li class="">B. Creation of security group rules for outbound access</li>
+<li class="">C. Maintenance of physical and environmental controls</li>
+<li class="">D. Application of Amazon EC2 operating system patches</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 99%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q991-题干怎么拆>Q99.1-题干怎么拆<a href=#q991-题干怎么拆 class=hash-link aria-label=Q99.1-题干怎么拆的直接链接 title=Q99.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q992-每个选项的定位>Q99.2-每个选项的定位<a href=#q992-每个选项的定位 class=hash-link aria-label=Q99.2-每个选项的定位的直接链接 title=Q99.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Management of IAM user permissions<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>Creation of security group rules for outbound access<td>Security Group：资源/ENI 级有状态虚拟防火墙。<td>题库记录为非正确选项<tr><td>C<td>Maintenance of physical and environmental controls<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>Application of Amazon EC2 operating system patches<td>Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q993-为什么题库会这样选>Q99.3-为什么题库会这样选<a href=#q993-为什么题库会这样选 class=hash-link aria-label=Q99.3-为什么题库会这样选的直接链接 title=Q99.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q106-iam-role-policy-mfa题>Q106-IAM-Role-Policy-MFA题<a href=#q106-iam-role-policy-mfa题 class=hash-link aria-label=Q106-IAM-Role-Policy-MFA题的直接链接 title=Q106-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A developer has been hired by a large company and needs AWS credentials. Which are security best practices that should be followed? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Grant the developer access to only the AWS resources needed to perform the job.</li>
+<li class="">B. Share the AWS account root user credentials with the developer.</li>
+<li class="">C. Add the developer to the administrator’s group in AWS IAM.</li>
+<li class="">D. Configure a password policy that ensures the developer’s password cannot be changed.</li>
+<li class="">E. Ensure the account password policy requires a minimum length.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>AE</code>；</p>
+<p><strong>社区投票：</strong> AE 91%, AD 9%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1061-题干怎么拆>Q106.1-题干怎么拆<a href=#q1061-题干怎么拆 class=hash-link aria-label=Q106.1-题干怎么拆的直接链接 title=Q106.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1062-每个选项的定位>Q106.2-每个选项的定位<a href=#q1062-每个选项的定位 class=hash-link aria-label=Q106.2-每个选项的定位的直接链接 title=Q106.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Grant the developer access to only the AWS resources needed to perform the job.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>B<td>Share the AWS account root user credentials with the developer.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>C<td>Add the developer to the administrator’s group in AWS IAM.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>Configure a password policy that ensures the developer’s password cannot be changed.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>E<td>Ensure the account password policy requires a minimum length.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1063-为什么题库会这样选>Q106.3-为什么题库会这样选<a href=#q1063-为什么题库会这样选 class=hash-link aria-label=Q106.3-为什么题库会这样选的直接链接 title=Q106.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。；该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1064--争议版本提示>Q106.4-⚠-争议/版本提示<a href=#q1064--争议版本提示 class=hash-link aria-label=Q106.4-⚠-争议/版本提示的直接链接 title=Q106.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区评论存在明显质疑/版本差异信号</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q108-iam-role-policy-mfa题>Q108-IAM-Role-Policy-MFA题<a href=#q108-iam-role-policy-mfa题 class=hash-link aria-label=Q108-IAM-Role-Policy-MFA题的直接链接 title=Q108-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A user wants to allow applications running on an Amazon EC2 instance to make calls to other AWS services. The access granted must be secure. Which AWS service or feature should be used?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Security groups</li>
+<li class="">B. AWS Firewall Manager</li>
+<li class="">C. IAM roles</li>
+<li class="">D. IAM user SSH keys</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 93%, A 7%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1081-题干怎么拆>Q108.1-题干怎么拆<a href=#q1081-题干怎么拆 class=hash-link aria-label=Q108.1-题干怎么拆的直接链接 title=Q108.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1082-每个选项的定位>Q108.2-每个选项的定位<a href=#q1082-每个选项的定位 class=hash-link aria-label=Q108.2-每个选项的定位的直接链接 title=Q108.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Security groups<td>Security Group：资源/ENI 级有状态虚拟防火墙。<td>题库记录为非正确选项<tr><td>B<td>AWS Firewall Manager<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为非正确选项<tr><td>C<td>IAM roles<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>IAM user SSH keys<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1083-为什么题库会这样选>Q108.3-为什么题库会这样选<a href=#q1083-为什么题库会这样选 class=hash-link aria-label=Q108.3-为什么题库会这样选的直接链接 title=Q108.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1084--争议版本提示>Q108.4-⚠-争议/版本提示<a href=#q1084--争议版本提示 class=hash-link aria-label=Q108.4-⚠-争议/版本提示的直接链接 title=Q108.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区评论存在明显质疑/版本差异信号</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q149-iam-role-policy-mfa题>Q149-IAM-Role-Policy-MFA题<a href=#q149-iam-role-policy-mfa题 class=hash-link aria-label=Q149-IAM-Role-Policy-MFA题的直接链接 title=Q149-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A systems administrator created a new IAM user for a developer and assigned the user an access key instead of a user name and password. What is the access key used for?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. To access the AWS account as the AWS account root user</li>
+<li class="">B. To access the AWS account through the AWS Management Console</li>
+<li class="">C. To access the AWS account through a CLI</li>
+<li class="">D. To access all of a company’s AWS accounts</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1491-题干怎么拆>Q149.1-题干怎么拆<a href=#q1491-题干怎么拆 class=hash-link aria-label=Q149.1-题干怎么拆的直接链接 title=Q149.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1492-每个选项的定位>Q149.2-每个选项的定位<a href=#q1492-每个选项的定位 class=hash-link aria-label=Q149.2-每个选项的定位的直接链接 title=Q149.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>To access the AWS account as the AWS account root user<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>B<td>To access the AWS account through the AWS Management Console<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为非正确选项<tr><td>C<td>To access the AWS account through a CLI<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>To access all of a company’s AWS accounts<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1493-为什么题库会这样选>Q149.3-为什么题库会这样选<a href=#q1493-为什么题库会这样选 class=hash-link aria-label=Q149.3-为什么题库会这样选的直接链接 title=Q149.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q160-iam-role-policy-mfa题>Q160-IAM-Role-Policy-MFA题<a href=#q160-iam-role-policy-mfa题 class=hash-link aria-label=Q160-IAM-Role-Policy-MFA题的直接链接 title=Q160-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which actions are best practices for an AWS account root user? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Share root user credentials with team members.</li>
+<li class="">B. Create multiple root users for the account, separated by environment.</li>
+<li class="">C. Enable multi-factor authentication (MFA) on the root user.</li>
+<li class="">D. Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.</li>
+<li class="">E. Use programmatic access instead of the root user and password.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>CD</code>；</p>
+<p><strong>社区投票：</strong> CD 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1601-题干怎么拆>Q160.1-题干怎么拆<a href=#q1601-题干怎么拆 class=hash-link aria-label=Q160.1-题干怎么拆的直接链接 title=Q160.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1602-每个选项的定位>Q160.2-每个选项的定位<a href=#q1602-每个选项的定位 class=hash-link aria-label=Q160.2-每个选项的定位的直接链接 title=Q160.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Share root user credentials with team members.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>B<td>Create multiple root users for the account, separated by environment.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>C<td>Enable multi-factor authentication (MFA) on the root user.<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项<tr><td>D<td>Create an IAM user with administrator privileges for daily administrative tasks, instead of using the root user.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>E<td>Use programmatic access instead of the root user and password.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1603-为什么题库会这样选>Q160.3-为什么题库会这样选<a href=#q1603-为什么题库会这样选 class=hash-link aria-label=Q160.3-为什么题库会这样选的直接链接 title=Q160.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：MFA：多因素认证，增强账号登录安全。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q165-iam-role-policy-mfa题>Q165-IAM-Role-Policy-MFA题<a href=#q165-iam-role-policy-mfa题 class=hash-link aria-label=Q165-IAM-Role-Policy-MFA题的直接链接 title=Q165-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to identify Amazon S3 buckets that are shared with another AWS account. Which AWS service or feature will meet these requirements?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Lake Formation</li>
+<li class="">B. IAM credential report</li>
+<li class="">C. Amazon CloudWatch</li>
+<li class="">D. IAM Access Analyzer</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>需求/考点标签：</strong> Object Storage；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1651-题干怎么拆>Q165.1-题干怎么拆<a href=#q1651-题干怎么拆 class=hash-link aria-label=Q165.1-题干怎么拆的直接链接 title=Q165.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Object Storage</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1652-每个选项的定位>Q165.2-每个选项的定位<a href=#q1652-每个选项的定位 class=hash-link aria-label=Q165.2-每个选项的定位的直接链接 title=Q165.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Lake Formation<td>AWS Lake Formation：帮助构建、管理和治理数据湖。<td>题库记录为非正确选项<tr><td>B<td>IAM credential report<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>Amazon CloudWatch<td>Amazon CloudWatch：Metrics/Logs/Alarms 等运行时监控与可观测性服务。<td>题库记录为非正确选项<tr><td>D<td>IAM Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1653-为什么题库会这样选>Q165.3-为什么题库会这样选<a href=#q1653-为什么题库会这样选 class=hash-link aria-label=Q165.3-为什么题库会这样选的直接链接 title=Q165.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q168-iam-role-policy-mfa题>Q168-IAM-Role-Policy-MFA题<a href=#q168-iam-role-policy-mfa题 class=hash-link aria-label=Q168-IAM-Role-Policy-MFA题的直接链接 title=Q168-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which action is a security best practice for access to sensitive data that is stored in an Amazon S3 bucket?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Enable S3 Cross-Region Replication (CRR) on the S3 bucket.</li>
+<li class="">B. Use IAM roles for applications that require access to the S3 bucket.</li>
+<li class="">C. Configure AWS WAF to prevent unauthorized access to the S3 bucket.</li>
+<li class="">D. Configure Amazon GuardDuty to prevent unauthorized access to the S3 bucket.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> S3敏感数据发现；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1681-题干怎么拆>Q168.1-题干怎么拆<a href=#q1681-题干怎么拆 class=hash-link aria-label=Q168.1-题干怎么拆的直接链接 title=Q168.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>S3敏感数据发现</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1682-每个选项的定位>Q168.2-每个选项的定位<a href=#q1682-每个选项的定位 class=hash-link aria-label=Q168.2-每个选项的定位的直接链接 title=Q168.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Enable S3 Cross-Region Replication (CRR) on the S3 bucket.<td>Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。<td>题库记录为非正确选项<tr><td>B<td>Use IAM roles for applications that require access to the S3 bucket.<td>Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。；IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Configure AWS WAF to prevent unauthorized access to the S3 bucket.<td>Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。；AWS WAF：Web 应用防火墙，过滤 HTTP(S) Web 请求。<td>题库记录为非正确选项<tr><td>D<td>Configure Amazon GuardDuty to prevent unauthorized access to the S3 bucket.<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。；Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1683-为什么题库会这样选>Q168.3-为什么题库会这样选<a href=#q1683-为什么题库会这样选 class=hash-link aria-label=Q168.3-为什么题库会这样选的直接链接 title=Q168.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。；IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q170-iam-role-policy-mfa题>Q170-IAM-Role-Policy-MFA题<a href=#q170-iam-role-policy-mfa题 class=hash-link aria-label=Q170-IAM-Role-Policy-MFA题的直接链接 title=Q170-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company needs a central user portal so that users can log in to third-party business applications that support Security Assertion Markup Language (SAML) 2.0. Which AWS service will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Identity and Access Management (IAM)</li>
+<li class="">B. Amazon Cognito</li>
+<li class="">C. AWS IAM Identity Center (AWS Single Sign-On)</li>
+<li class="">D. AWS CLI</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 52%, B 48%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1701-题干怎么拆>Q170.1-题干怎么拆<a href=#q1701-题干怎么拆 class=hash-link aria-label=Q170.1-题干怎么拆的直接链接 title=Q170.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1702-每个选项的定位>Q170.2-每个选项的定位<a href=#q1702-每个选项的定位 class=hash-link aria-label=Q170.2-每个选项的定位的直接链接 title=Q170.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS CLI<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1703-为什么题库会这样选>Q170.3-为什么题库会这样选<a href=#q1703-为什么题库会这样选 class=hash-link aria-label=Q170.3-为什么题库会这样选的直接链接 title=Q170.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1704--争议版本提示>Q170.4-⚠-争议/版本提示<a href=#q1704--争议版本提示 class=hash-link aria-label=Q170.4-⚠-争议/版本提示的直接链接 title=Q170.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区投票分散，最高项仅 52%</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q177-iam-role-policy-mfa题>Q177-IAM-Role-Policy-MFA题<a href=#q177-iam-role-policy-mfa题 class=hash-link aria-label=Q177-IAM-Role-Policy-MFA题的直接链接 title=Q177-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which action will help increase security in the AWS Cloud?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Enable programmatic access for all IAM users.</li>
+<li class="">B. Use IAM users instead of IAM roles to delegate permissions.</li>
+<li class="">C. Rotate access keys on a reoccurring basis.</li>
+<li class="">D. Use inline policies instead of customer managed policies.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1771-题干怎么拆>Q177.1-题干怎么拆<a href=#q1771-题干怎么拆 class=hash-link aria-label=Q177.1-题干怎么拆的直接链接 title=Q177.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1772-每个选项的定位>Q177.2-每个选项的定位<a href=#q1772-每个选项的定位 class=hash-link aria-label=Q177.2-每个选项的定位的直接链接 title=Q177.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Enable programmatic access for all IAM users.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>Use IAM users instead of IAM roles to delegate permissions.<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>Rotate access keys on a reoccurring basis.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>Use inline policies instead of customer managed policies.<td>该选项描述 Shared Responsibility 中客户侧的管理/安全责任。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1773-为什么题库会这样选>Q177.3-为什么题库会这样选<a href=#q1773-为什么题库会这样选 class=hash-link aria-label=Q177.3-为什么题库会这样选的直接链接 title=Q177.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1774--争议版本提示>Q177.4-⚠-争议/版本提示<a href=#q1774--争议版本提示 class=hash-link aria-label=Q177.4-⚠-争议/版本提示的直接链接 title=Q177.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区评论存在明显质疑/版本差异信号</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q192-iam-role-policy-mfa题>Q192-IAM-Role-Policy-MFA题<a href=#q192-iam-role-policy-mfa题 class=hash-link aria-label=Q192-IAM-Role-Policy-MFA题的直接链接 title=Q192-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company hosts an application on multiple Amazon EC2 instances. The application uses Amazon Simple Notification Service (Amazon SNS) to send messages. Which AWS service or feature will give the application permission to access required AWS services?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Certificate Manager (ACM)</li>
+<li class="">B. IAM roles</li>
+<li class="">C. AWS Security Hub</li>
+<li class="">D. Amazon GuardDuty</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> 一对多通知；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1921-题干怎么拆>Q192.1-题干怎么拆<a href=#q1921-题干怎么拆 class=hash-link aria-label=Q192.1-题干怎么拆的直接链接 title=Q192.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>一对多通知</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1922-每个选项的定位>Q192.2-每个选项的定位<a href=#q1922-每个选项的定位 class=hash-link aria-label=Q192.2-每个选项的定位的直接链接 title=Q192.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Certificate Manager (ACM)<td>AWS Certificate Manager：供应和管理 TLS/SSL 证书。<td>题库记录为非正确选项<tr><td>B<td>IAM roles<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>AWS Security Hub<td>AWS Security Hub：聚合安全发现并提供安全态势管理。<td>题库记录为非正确选项<tr><td>D<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1923-为什么题库会这样选>Q192.3-为什么题库会这样选<a href=#q1923-为什么题库会这样选 class=hash-link aria-label=Q192.3-为什么题库会这样选的直接链接 title=Q192.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q202-iam-role-policy-mfa题>Q202-IAM-Role-Policy-MFA题<a href=#q202-iam-role-policy-mfa题 class=hash-link aria-label=Q202-IAM-Role-Policy-MFA题的直接链接 title=Q202-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or resource can be used to identify services that have been used by a user within a specified date range?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon S3 access control lists (ACLs)</li>
+<li class="">B. AWS Certificate Manager (ACM)</li>
+<li class="">C. Network Access Analyzer</li>
+<li class="">D. AWS Identity and Access Management Access Analyzer</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2021-题干怎么拆>Q202.1-题干怎么拆<a href=#q2021-题干怎么拆 class=hash-link aria-label=Q202.1-题干怎么拆的直接链接 title=Q202.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2022-每个选项的定位>Q202.2-每个选项的定位<a href=#q2022-每个选项的定位 class=hash-link aria-label=Q202.2-每个选项的定位的直接链接 title=Q202.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon S3 access control lists (ACLs)<td>Amazon S3：高耐久、可扩展的对象存储，以 Bucket/Object 组织数据。<td>题库记录为非正确选项<tr><td>B<td>AWS Certificate Manager (ACM)<td>AWS Certificate Manager：供应和管理 TLS/SSL 证书。<td>题库记录为非正确选项<tr><td>C<td>Network Access Analyzer<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>AWS Identity and Access Management Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2023-为什么题库会这样选>Q202.3-为什么题库会这样选<a href=#q2023-为什么题库会这样选 class=hash-link aria-label=Q202.3-为什么题库会这样选的直接链接 title=Q202.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q216-iam-role-policy-mfa题>Q216-IAM-Role-Policy-MFA题<a href=#q216-iam-role-policy-mfa题 class=hash-link aria-label=Q216-IAM-Role-Policy-MFA题的直接链接 title=Q216-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company has teams that have different job roles and responsibilities. The company’s employees often change teams. The company needs to manage permissions for the employees so that the permissions are appropriate for the job responsibilities. Which IAM resource should the company use to meet this requirement with the LEAST operational overhead?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM user groups</li>
+<li class="">B. IAM roles</li>
+<li class="">C. IAM instance profiles</li>
+<li class="">D. IAM policies for individual users</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 52%, A 48%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2161-题干怎么拆>Q216.1-题干怎么拆<a href=#q2161-题干怎么拆 class=hash-link aria-label=Q216.1-题干怎么拆的直接链接 title=Q216.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2162-每个选项的定位>Q216.2-每个选项的定位<a href=#q2162-每个选项的定位 class=hash-link aria-label=Q216.2-每个选项的定位的直接链接 title=Q216.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM user groups<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>IAM roles<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>IAM instance profiles<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>IAM policies for individual users<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2163-为什么题库会这样选>Q216.3-为什么题库会这样选<a href=#q2163-为什么题库会这样选 class=hash-link aria-label=Q216.3-为什么题库会这样选的直接链接 title=Q216.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2164--争议版本提示>Q216.4-⚠-争议/版本提示<a href=#q2164--争议版本提示 class=hash-link aria-label=Q216.4-⚠-争议/版本提示的直接链接 title=Q216.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区投票分散，最高项仅 52%</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q220-iam-role-policy-mfa题>Q220-IAM-Role-Policy-MFA题<a href=#q220-iam-role-policy-mfa题 class=hash-link aria-label=Q220-IAM-Role-Policy-MFA题的直接链接 title=Q220-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to integrate its online shopping website with social media login credentials. Which AWS service can the company use to make this integration?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Directory Service</li>
+<li class="">B. AWS Identity and Access Management (IAM)</li>
+<li class="">C. Amazon Cognito</li>
+<li class="">D. AWS IAM Identity Center (AWS Single Sign-On)</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Block Storage；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2201-题干怎么拆>Q220.1-题干怎么拆<a href=#q2201-题干怎么拆 class=hash-link aria-label=Q220.1-题干怎么拆的直接链接 title=Q220.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Block Storage</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2202-每个选项的定位>Q220.2-每个选项的定位<a href=#q2202-每个选项的定位 class=hash-link aria-label=Q220.2-每个选项的定位的直接链接 title=Q220.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Directory Service<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为正确选项<tr><td>D<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2203-为什么题库会这样选>Q220.3-为什么题库会这样选<a href=#q2203-为什么题库会这样选 class=hash-link aria-label=Q220.3-为什么题库会这样选的直接链接 title=Q220.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q234-iam-role-policy-mfa题>Q234-IAM-Role-Policy-MFA题<a href=#q234-iam-role-policy-mfa题 class=hash-link aria-label=Q234-IAM-Role-Policy-MFA题的直接链接 title=Q234-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature will search for and identify AWS resources that are shared externally?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon OpenSearch Service</li>
+<li class="">B. AWS Control Tower</li>
+<li class="">C. AWS IAM Access Analyzer</li>
+<li class="">D. AWS Fargate</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2341-题干怎么拆>Q234.1-题干怎么拆<a href=#q2341-题干怎么拆 class=hash-link aria-label=Q234.1-题干怎么拆的直接链接 title=Q234.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2342-每个选项的定位>Q234.2-每个选项的定位<a href=#q2342-每个选项的定位 class=hash-link aria-label=Q234.2-每个选项的定位的直接链接 title=Q234.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon OpenSearch Service<td>Amazon OpenSearch Service：托管搜索、日志分析与可观测性搜索引擎服务。<td>题库记录为非正确选项<tr><td>B<td>AWS Control Tower<td>AWS Control Tower：基于最佳实践建立和治理多账号 Landing Zone。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Fargate<td>AWS Fargate：为 ECS/EKS 提供不需要管理底层服务器的容器计算能力。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2343-为什么题库会这样选>Q234.3-为什么题库会这样选<a href=#q2343-为什么题库会这样选 class=hash-link aria-label=Q234.3-为什么题库会这样选的直接链接 title=Q234.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q279-iam-role-policy-mfa题>Q279-IAM-Role-Policy-MFA题<a href=#q279-iam-role-policy-mfa题 class=hash-link aria-label=Q279-IAM-Role-Policy-MFA题的直接链接 title=Q279-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A developer wants AWS users to access AWS services by using temporary security credentials. Which AWS service or feature should the developer use to provide these credentials?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM policies</li>
+<li class="">B. IAM user groups</li>
+<li class="">C. AWS Security Token Service (AWS STS)</li>
+<li class="">D. AWS IAM Identity Center (AWS Single Sign-On)</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2791-题干怎么拆>Q279.1-题干怎么拆<a href=#q2791-题干怎么拆 class=hash-link aria-label=Q279.1-题干怎么拆的直接链接 title=Q279.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2792-每个选项的定位>Q279.2-每个选项的定位<a href=#q2792-每个选项的定位 class=hash-link aria-label=Q279.2-每个选项的定位的直接链接 title=Q279.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM policies<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>IAM user groups<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Security Token Service (AWS STS)<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2793-为什么题库会这样选>Q279.3-为什么题库会这样选<a href=#q2793-为什么题库会这样选 class=hash-link aria-label=Q279.3-为什么题库会这样选的直接链接 title=Q279.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q283-iam-role-policy-mfa题>Q283-IAM-Role-Policy-MFA题<a href=#q283-iam-role-policy-mfa题 class=hash-link aria-label=Q283-IAM-Role-Policy-MFA题的直接链接 title=Q283-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to verify if multi-factor authentication (MFA) is enabled for all users within its AWS accounts. Which AWS service or resource will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Cost and Usage Report</li>
+<li class="">B. IAM credential reports</li>
+<li class="">C. AWS Artifact</li>
+<li class="">D. Amazon CloudFront reports</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> MFA；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2831-题干怎么拆>Q283.1-题干怎么拆<a href=#q2831-题干怎么拆 class=hash-link aria-label=Q283.1-题干怎么拆的直接链接 title=Q283.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>MFA</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2832-每个选项的定位>Q283.2-每个选项的定位<a href=#q2832-每个选项的定位 class=hash-link aria-label=Q283.2-每个选项的定位的直接链接 title=Q283.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Cost and Usage Report<td>AWS Cost and Usage Report：提供细粒度成本与使用明细数据。<td>题库记录为非正确选项<tr><td>B<td>IAM credential reports<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>AWS Artifact<td>AWS Artifact：按需访问 AWS 合规报告和部分协议的门户。<td>题库记录为非正确选项<tr><td>D<td>Amazon CloudFront reports<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2833-为什么题库会这样选>Q283.3-为什么题库会这样选<a href=#q2833-为什么题库会这样选 class=hash-link aria-label=Q283.3-为什么题库会这样选的直接链接 title=Q283.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q288-iam-role-policy-mfa题>Q288-IAM-Role-Policy-MFA题<a href=#q288-iam-role-policy-mfa题 class=hash-link aria-label=Q288-IAM-Role-Policy-MFA题的直接链接 title=Q288-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> An external auditor has requested that a company provide a list of all its IAM users, including the status of users' credentials and access keys. What is the SIMPLEST way to provide this information?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Create an IAM user account for the auditor, granting the auditor administrator permissions.</li>
+<li class="">B. Take a screenshot of each user's page in the AWS Management Console, then provide the screenshots to the auditor.</li>
+<li class="">C. Download the IAM credential report, then provide the report to the auditor.</li>
+<li class="">D. Download the AWS Trusted Advisor report, then provide the report to the auditor.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Audit Trail；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2881-题干怎么拆>Q288.1-题干怎么拆<a href=#q2881-题干怎么拆 class=hash-link aria-label=Q288.1-题干怎么拆的直接链接 title=Q288.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Audit Trail</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2882-每个选项的定位>Q288.2-每个选项的定位<a href=#q2882-每个选项的定位 class=hash-link aria-label=Q288.2-每个选项的定位的直接链接 title=Q288.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Create an IAM user account for the auditor, granting the auditor administrator permissions.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>Take a screenshot of each user's page in the AWS Management Console, then provide the screenshots to the auditor.<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为非正确选项<tr><td>C<td>Download the IAM credential report, then provide the report to the auditor.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>Download the AWS Trusted Advisor report, then provide the report to the auditor.<td>AWS Trusted Advisor：根据 AWS 最佳实践提供成本、安全、性能、可靠性等检查建议。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2883-为什么题库会这样选>Q288.3-为什么题库会这样选<a href=#q2883-为什么题库会这样选 class=hash-link aria-label=Q288.3-为什么题库会这样选的直接链接 title=Q288.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q296-iam-role-policy-mfa题>Q296-IAM-Role-Policy-MFA题<a href=#q296-iam-role-policy-mfa题 class=hash-link aria-label=Q296-IAM-Role-Policy-MFA题的直接链接 title=Q296-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company has a managed IAM policy that does not grant the necessary permissions for users to accomplish required tasks. How can this be resolved?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Enable AWS Shield Advanced.</li>
+<li class="">B. Create a custom IAM policy.</li>
+<li class="">C. Use a third-party web application firewall (WAF) managed rule from the AWS Marketplace.</li>
+<li class="">D. Use AWS Key Management Service (AWS KMS) to create a customer-managed key.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2961-题干怎么拆>Q296.1-题干怎么拆<a href=#q2961-题干怎么拆 class=hash-link aria-label=Q296.1-题干怎么拆的直接链接 title=Q296.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2962-每个选项的定位>Q296.2-每个选项的定位<a href=#q2962-每个选项的定位 class=hash-link aria-label=Q296.2-每个选项的定位的直接链接 title=Q296.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Enable AWS Shield Advanced.<td>AWS Shield：AWS DDoS 防护服务。<td>题库记录为非正确选项<tr><td>B<td>Create a custom IAM policy.<td>IAM Policy：用 JSON 等形式定义允许/拒绝哪些 AWS 操作。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Use a third-party web application firewall (WAF) managed rule from the AWS Marketplace.<td>AWS Marketplace：查找、购买和部署第三方软件、数据与服务的数字目录。；AWS WAF：Web 应用防火墙，过滤 HTTP(S) Web 请求。<td>题库记录为非正确选项<tr><td>D<td>Use AWS Key Management Service (AWS KMS) to create a customer-managed key.<td>AWS KMS：集中创建、控制和使用加密密钥。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q2963-为什么题库会这样选>Q296.3-为什么题库会这样选<a href=#q2963-为什么题库会这样选 class=hash-link aria-label=Q296.3-为什么题库会这样选的直接链接 title=Q296.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：IAM Policy：用 JSON 等形式定义允许/拒绝哪些 AWS 操作。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q301-iam-role-policy-mfa题>Q301-IAM-Role-Policy-MFA题<a href=#q301-iam-role-policy-mfa题 class=hash-link aria-label=Q301-IAM-Role-Policy-MFA题的直接链接 title=Q301-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which of the following is a characteristic of the AWS account root user?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. The root user is the only user that can be configured with multi-factor authentication (MFA).</li>
+<li class="">B. The root user is the only user that can access the AWS Management Console.</li>
+<li class="">C. The root user is the first sign-in identity that is available when an AWS account is created.</li>
+<li class="">D. The root user has a password that cannot be changed.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3011-题干怎么拆>Q301.1-题干怎么拆<a href=#q3011-题干怎么拆 class=hash-link aria-label=Q301.1-题干怎么拆的直接链接 title=Q301.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3012-每个选项的定位>Q301.2-每个选项的定位<a href=#q3012-每个选项的定位 class=hash-link aria-label=Q301.2-每个选项的定位的直接链接 title=Q301.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>The root user is the only user that can be configured with multi-factor authentication (MFA).<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为非正确选项<tr><td>B<td>The root user is the only user that can access the AWS Management Console.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>C<td>The root user is the first sign-in identity that is available when an AWS account is created.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为正确选项<tr><td>D<td>The root user has a password that cannot be changed.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3013-为什么题库会这样选>Q301.3-为什么题库会这样选<a href=#q3013-为什么题库会这样选 class=hash-link aria-label=Q301.3-为什么题库会这样选的直接链接 title=Q301.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Root User 拥有账号最高级权限，应强保护并避免日常使用。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q306-iam-role-policy-mfa题>Q306-IAM-Role-Policy-MFA题<a href=#q306-iam-role-policy-mfa题 class=hash-link aria-label=Q306-IAM-Role-Policy-MFA题的直接链接 title=Q306-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to quickly implement a continuous integration/continuous delivery (CI/CD) pipeline. Which AWS service will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Config</li>
+<li class="">B. Amazon Cognito</li>
+<li class="">C. AWS DataSync</li>
+<li class="">D. AWS CodeStar</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3061-题干怎么拆>Q306.1-题干怎么拆<a href=#q3061-题干怎么拆 class=hash-link aria-label=Q306.1-题干怎么拆的直接链接 title=Q306.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3062-每个选项的定位>Q306.2-每个选项的定位<a href=#q3062-每个选项的定位 class=hash-link aria-label=Q306.2-每个选项的定位的直接链接 title=Q306.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Config<td>AWS Config：记录资源配置与变化，并可按规则检查配置合规性。<td>题库记录为非正确选项<tr><td>B<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>C<td>AWS DataSync<td>AWS DataSync：在线高速自动化传输文件/对象数据到、从 AWS 存储。<td>题库记录为非正确选项<tr><td>D<td>AWS CodeStar<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3063-为什么题库会这样选>Q306.3-为什么题库会这样选<a href=#q3063-为什么题库会这样选 class=hash-link aria-label=Q306.3-为什么题库会这样选的直接链接 title=Q306.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q336-iam-role-policy-mfa题>Q336-IAM-Role-Policy-MFA题<a href=#q336-iam-role-policy-mfa题 class=hash-link aria-label=Q336-IAM-Role-Policy-MFA题的直接链接 title=Q336-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to generate a list of IAM users. The company also wants to view the status of various credentials that are associated with the users, such as password, access keys, and multi-factor authentication (MFA) devices. Which AWS service or feature will meet these requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM credential report</li>
+<li class="">B. AWS IAM Identity Center (AWS Single Sign-On)</li>
+<li class="">C. AWS Identity and Access Management Access Analyzer</li>
+<li class="">D. AWS Cost and Usage Report</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>需求/考点标签：</strong> MFA；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3361-题干怎么拆>Q336.1-题干怎么拆<a href=#q3361-题干怎么拆 class=hash-link aria-label=Q336.1-题干怎么拆的直接链接 title=Q336.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>MFA</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3362-每个选项的定位>Q336.2-每个选项的定位<a href=#q3362-每个选项的定位 class=hash-link aria-label=Q336.2-每个选项的定位的直接链接 title=Q336.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM credential report<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>B<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Identity and Access Management Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>AWS Cost and Usage Report<td>AWS Cost and Usage Report：提供细粒度成本与使用明细数据。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3363-为什么题库会这样选>Q336.3-为什么题库会这样选<a href=#q3363-为什么题库会这样选 class=hash-link aria-label=Q336.3-为什么题库会这样选的直接链接 title=Q336.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q339-iam-role-policy-mfa题>Q339-IAM-Role-Policy-MFA题<a href=#q339-iam-role-policy-mfa题 class=hash-link aria-label=Q339-IAM-Role-Policy-MFA题的直接链接 title=Q339-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to allow users to authenticate and authorize multiple AWS accounts by using a single set of credentials. Which AWS service or resource will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Organizations</li>
+<li class="">B. IAM user</li>
+<li class="">C. AWS IAM Identity Center (AWS Single Sign-On)</li>
+<li class="">D. AWS Control Tower</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3391-题干怎么拆>Q339.1-题干怎么拆<a href=#q3391-题干怎么拆 class=hash-link aria-label=Q339.1-题干怎么拆的直接链接 title=Q339.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3392-每个选项的定位>Q339.2-每个选项的定位<a href=#q3392-每个选项的定位 class=hash-link aria-label=Q339.2-每个选项的定位的直接链接 title=Q339.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Organizations<td>AWS Organizations：集中组织和治理多个 AWS Account，并支持 Consolidated Billing、SCP 等。<td>题库记录为非正确选项<tr><td>B<td>IAM user<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Control Tower<td>AWS Control Tower：基于最佳实践建立和治理多账号 Landing Zone。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3393-为什么题库会这样选>Q339.3-为什么题库会这样选<a href=#q3393-为什么题库会这样选 class=hash-link aria-label=Q339.3-为什么题库会这样选的直接链接 title=Q339.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q343-iam-role-policy-mfa题>Q343-IAM-Role-Policy-MFA题<a href=#q343-iam-role-policy-mfa题 class=hash-link aria-label=Q343-IAM-Role-Policy-MFA题的直接链接 title=Q343-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is migrating its applications from on-premises to the AWS Cloud. The company wants to ensure that the applications are assigned only the minimum permissions that are needed to perform all operations. Which AWS service will meet these requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Identity and Access Management (IAM)</li>
+<li class="">B. Amazon CloudWatch</li>
+<li class="">C. Amazon Macie</li>
+<li class="">D. Amazon GuardDuty</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3431-题干怎么拆>Q343.1-题干怎么拆<a href=#q3431-题干怎么拆 class=hash-link aria-label=Q343.1-题干怎么拆的直接链接 title=Q343.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3432-每个选项的定位>Q343.2-每个选项的定位<a href=#q3432-每个选项的定位 class=hash-link aria-label=Q343.2-每个选项的定位的直接链接 title=Q343.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>B<td>Amazon CloudWatch<td>Amazon CloudWatch：Metrics/Logs/Alarms 等运行时监控与可观测性服务。<td>题库记录为非正确选项<tr><td>C<td>Amazon Macie<td>Amazon Macie：发现和保护 S3 中的敏感数据。<td>题库记录为非正确选项<tr><td>D<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3433-为什么题库会这样选>Q343.3-为什么题库会这样选<a href=#q3433-为什么题库会这样选 class=hash-link aria-label=Q343.3-为什么题库会这样选的直接链接 title=Q343.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q348-iam-role-policy-mfa题>Q348-IAM-Role-Policy-MFA题<a href=#q348-iam-role-policy-mfa题 class=hash-link aria-label=Q348-IAM-Role-Policy-MFA题的直接链接 title=Q348-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which task requires a user to sign in as the AWS account root user?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. The deletion of IAM users</li>
+<li class="">B. The deletion of an AWS account</li>
+<li class="">C. The creation of an organization in AWS Organizations</li>
+<li class="">D. The deletion of Amazon EC2 instances</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 82%, C 18%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3481-题干怎么拆>Q348.1-题干怎么拆<a href=#q3481-题干怎么拆 class=hash-link aria-label=Q348.1-题干怎么拆的直接链接 title=Q348.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3482-每个选项的定位>Q348.2-每个选项的定位<a href=#q3482-每个选项的定位 class=hash-link aria-label=Q348.2-每个选项的定位的直接链接 title=Q348.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>The deletion of IAM users<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>The deletion of an AWS account<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>C<td>The creation of an organization in AWS Organizations<td>AWS Organizations：集中组织和治理多个 AWS Account，并支持 Consolidated Billing、SCP 等。<td>题库记录为非正确选项<tr><td>D<td>The deletion of Amazon EC2 instances<td>Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3483-为什么题库会这样选>Q348.3-为什么题库会这样选<a href=#q3483-为什么题库会这样选 class=hash-link aria-label=Q348.3-为什么题库会这样选的直接链接 title=Q348.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q385-iam-role-policy-mfa题>Q385-IAM-Role-Policy-MFA题<a href=#q385-iam-role-policy-mfa题 class=hash-link aria-label=Q385-IAM-Role-Policy-MFA题的直接链接 title=Q385-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or resource can identify and provide reports on IAM resources in one AWS account that is shared with another AWS account?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM credential report</li>
+<li class="">B. AWS IAM Identity Center (AWS Single Sign-On)</li>
+<li class="">C. AWS Identity and Access Management Access Analyzer</li>
+<li class="">D. Amazon Cognito user pool</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3851-题干怎么拆>Q385.1-题干怎么拆<a href=#q3851-题干怎么拆 class=hash-link aria-label=Q385.1-题干怎么拆的直接链接 title=Q385.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3852-每个选项的定位>Q385.2-每个选项的定位<a href=#q3852-每个选项的定位 class=hash-link aria-label=Q385.2-每个选项的定位的直接链接 title=Q385.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM credential report<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Identity and Access Management Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>Amazon Cognito user pool<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3853-为什么题库会这样选>Q385.3-为什么题库会这样选<a href=#q3853-为什么题库会这样选 class=hash-link aria-label=Q385.3-为什么题库会这样选的直接链接 title=Q385.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q391-iam-role-policy-mfa题>Q391-IAM-Role-Policy-MFA题<a href=#q391-iam-role-policy-mfa题 class=hash-link aria-label=Q391-IAM-Role-Policy-MFA题的直接链接 title=Q391-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to manage sign-in security for workforce users. The company needs to create workforce users and centrally manage their access across all the company's AWS accounts and applications. Which AWS service will meet these requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Audit Manager</li>
+<li class="">B. Amazon Cognito</li>
+<li class="">C. AWS Security Hub</li>
+<li class="">D. AWS IAM Identity Center (AWS Single Sign-On)</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>社区投票：</strong> D 90%, B 10%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3911-题干怎么拆>Q391.1-题干怎么拆<a href=#q3911-题干怎么拆 class=hash-link aria-label=Q391.1-题干怎么拆的直接链接 title=Q391.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3912-每个选项的定位>Q391.2-每个选项的定位<a href=#q3912-每个选项的定位 class=hash-link aria-label=Q391.2-每个选项的定位的直接链接 title=Q391.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Audit Manager<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为非正确选项<tr><td>B<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>C<td>AWS Security Hub<td>AWS Security Hub：聚合安全发现并提供安全态势管理。<td>题库记录为非正确选项<tr><td>D<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3913-为什么题库会这样选>Q391.3-为什么题库会这样选<a href=#q3913-为什么题库会这样选 class=hash-link aria-label=Q391.3-为什么题库会这样选的直接链接 title=Q391.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q392-iam-role-policy-mfa题>Q392-IAM-Role-Policy-MFA题<a href=#q392-iam-role-policy-mfa题 class=hash-link aria-label=Q392-IAM-Role-Policy-MFA题的直接链接 title=Q392-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants a report that lists the status of multi-factor authentication (MFA) devices that all users in the company's AWS account use. Which AWS feature or service will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Cost and Usage Reports</li>
+<li class="">B. IAM credential reports</li>
+<li class="">C. Detailed Billing Reports -</li>
+<li class="">D. AWS Cost Explorer reports</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> MFA；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3921-题干怎么拆>Q392.1-题干怎么拆<a href=#q3921-题干怎么拆 class=hash-link aria-label=Q392.1-题干怎么拆的直接链接 title=Q392.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>MFA</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3922-每个选项的定位>Q392.2-每个选项的定位<a href=#q3922-每个选项的定位 class=hash-link aria-label=Q392.2-每个选项的定位的直接链接 title=Q392.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Cost and Usage Reports<td>AWS Cost and Usage Report：提供细粒度成本与使用明细数据。<td>题库记录为非正确选项<tr><td>B<td>IAM credential reports<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Detailed Billing Reports -<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>AWS Cost Explorer reports<td>AWS Cost Explorer：分析历史/当前 AWS 成本和用量趋势。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3923-为什么题库会这样选>Q392.3-为什么题库会这样选<a href=#q3923-为什么题库会这样选 class=hash-link aria-label=Q392.3-为什么题库会这样选的直接链接 title=Q392.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q394-iam-role-policy-mfa题>Q394-IAM-Role-Policy-MFA题<a href=#q394-iam-role-policy-mfa题 class=hash-link aria-label=Q394-IAM-Role-Policy-MFA题的直接链接 title=Q394-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is launching a mobile app in the AWS Cloud. The company wants the app's users to sign in through social media identity providers (IdPs). Which AWS service will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Lambda</li>
+<li class="">B. Amazon Cognito</li>
+<li class="">C. AWS Secrets Manager</li>
+<li class="">D. Amazon CloudFront</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3941-题干怎么拆>Q394.1-题干怎么拆<a href=#q3941-题干怎么拆 class=hash-link aria-label=Q394.1-题干怎么拆的直接链接 title=Q394.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3942-每个选项的定位>Q394.2-每个选项的定位<a href=#q3942-每个选项的定位 class=hash-link aria-label=Q394.2-每个选项的定位的直接链接 title=Q394.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Lambda<td>AWS Lambda：事件驱动的 Serverless 函数运行环境，无需管理服务器。<td>题库记录为非正确选项<tr><td>B<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为正确选项<tr><td>C<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项<tr><td>D<td>Amazon CloudFront<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3943-为什么题库会这样选>Q394.3-为什么题库会这样选<a href=#q3943-为什么题库会这样选 class=hash-link aria-label=Q394.3-为什么题库会这样选的直接链接 title=Q394.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q409-iam-role-policy-mfa题>Q409-IAM-Role-Policy-MFA题<a href=#q409-iam-role-policy-mfa题 class=hash-link aria-label=Q409-IAM-Role-Policy-MFA题的直接链接 title=Q409-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which task is the responsibility of a company that is using Amazon RDS?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Provision the underlying infrastructure.</li>
+<li class="">B. Create IAM policies to control administrative access to the service.</li>
+<li class="">C. Install the cables to connect the hardware for compute and storage.</li>
+<li class="">D. Install and patch the RDS operating system.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> 关系数据库高可用；</p>
+<p><strong>社区投票：</strong> B 75%, D 25%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4091-题干怎么拆>Q409.1-题干怎么拆<a href=#q4091-题干怎么拆 class=hash-link aria-label=Q409.1-题干怎么拆的直接链接 title=Q409.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>关系数据库高可用</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4092-每个选项的定位>Q409.2-每个选项的定位<a href=#q4092-每个选项的定位 class=hash-link aria-label=Q409.2-每个选项的定位的直接链接 title=Q409.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Provision the underlying infrastructure.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>Create IAM policies to control administrative access to the service.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Install the cables to connect the hardware for compute and storage.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>Install and patch the RDS operating system.<td>Amazon RDS：托管关系数据库服务，负责大量数据库基础设施运维。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4093-为什么题库会这样选>Q409.3-为什么题库会这样选<a href=#q4093-为什么题库会这样选 class=hash-link aria-label=Q409.3-为什么题库会这样选的直接链接 title=Q409.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q428-iam-role-policy-mfa题>Q428-IAM-Role-Policy-MFA题<a href=#q428-iam-role-policy-mfa题 class=hash-link aria-label=Q428-IAM-Role-Policy-MFA题的直接链接 title=Q428-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to provide one of its employees with access to Amazon RDS. The company also wants to limit the interaction to only the AWS CLI and AWS software development kits (SDKs). Which combination of actions should the company take to meet these requirements while following the principles of least privilege? (Choose two.)</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Create an IAM user and provide AWS Management Console access only.</li>
+<li class="">B. Create an IAM user and provide programmatic access only.</li>
+<li class="">C. Create an IAM role and provide AWS Management Console access only.</li>
+<li class="">D. Create an IAM policy with administrator access and attach it to the IAM user.</li>
+<li class="">E. Create an IAM policy with Amazon RDS access and attach it to the IAM user.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>BE</code>；</p>
+<p><strong>需求/考点标签：</strong> 关系数据库高可用；</p>
+<p><strong>社区投票：</strong> BE 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4281-题干怎么拆>Q428.1-题干怎么拆<a href=#q4281-题干怎么拆 class=hash-link aria-label=Q428.1-题干怎么拆的直接链接 title=Q428.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>关系数据库高可用</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4282-每个选项的定位>Q428.2-每个选项的定位<a href=#q4282-每个选项的定位 class=hash-link aria-label=Q428.2-每个选项的定位的直接链接 title=Q428.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Create an IAM user and provide AWS Management Console access only.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>Create an IAM user and provide programmatic access only.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Create an IAM role and provide AWS Management Console access only.<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>Create an IAM policy with administrator access and attach it to the IAM user.<td>IAM Policy：用 JSON 等形式定义允许/拒绝哪些 AWS 操作。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>E<td>Create an IAM policy with Amazon RDS access and attach it to the IAM user.<td>IAM Policy：用 JSON 等形式定义允许/拒绝哪些 AWS 操作。；Amazon RDS：托管关系数据库服务，负责大量数据库基础设施运维。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4283-为什么题库会这样选>Q428.3-为什么题库会这样选<a href=#q4283-为什么题库会这样选 class=hash-link aria-label=Q428.3-为什么题库会这样选的直接链接 title=Q428.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。；IAM Policy：用 JSON 等形式定义允许/拒绝哪些 AWS 操作。；Amazon RDS：托管关系数据库服务，负责大量数据库基础设施运维。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q433-iam-role-policy-mfa题>Q433-IAM-Role-Policy-MFA题<a href=#q433-iam-role-policy-mfa题 class=hash-link aria-label=Q433-IAM-Role-Policy-MFA题的直接链接 title=Q433-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to organize its users so that the company can grant permissions to the users as a group. Which AWS service or tool can the company use to meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Security groups</li>
+<li class="">B. AWS Identity and Access Management (IAM)</li>
+<li class="">C. Resource groups</li>
+<li class="">D. AWS Security Hub</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4331-题干怎么拆>Q433.1-题干怎么拆<a href=#q4331-题干怎么拆 class=hash-link aria-label=Q433.1-题干怎么拆的直接链接 title=Q433.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4332-每个选项的定位>Q433.2-每个选项的定位<a href=#q4332-每个选项的定位 class=hash-link aria-label=Q433.2-每个选项的定位的直接链接 title=Q433.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Security groups<td>Security Group：资源/ENI 级有状态虚拟防火墙。<td>题库记录为非正确选项<tr><td>B<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Resource groups<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>AWS Security Hub<td>AWS Security Hub：聚合安全发现并提供安全态势管理。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4333-为什么题库会这样选>Q433.3-为什么题库会这样选<a href=#q4333-为什么题库会这样选 class=hash-link aria-label=Q433.3-为什么题库会这样选的直接链接 title=Q433.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q447-iam-role-policy-mfa题>Q447-IAM-Role-Policy-MFA题<a href=#q447-iam-role-policy-mfa题 class=hash-link aria-label=Q447-IAM-Role-Policy-MFA题的直接链接 title=Q447-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which action should a company take to improve security in its AWS account?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Require multi-factor authentication (MFA) for privileged users.</li>
+<li class="">B. Remove the root user account.</li>
+<li class="">C. Create an access key for the AWS account root user.</li>
+<li class="">D. Create an access key for each privileged user.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4471-题干怎么拆>Q447.1-题干怎么拆<a href=#q4471-题干怎么拆 class=hash-link aria-label=Q447.1-题干怎么拆的直接链接 title=Q447.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4472-每个选项的定位>Q447.2-每个选项的定位<a href=#q4472-每个选项的定位 class=hash-link aria-label=Q447.2-每个选项的定位的直接链接 title=Q447.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Require multi-factor authentication (MFA) for privileged users.<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项<tr><td>B<td>Remove the root user account.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>C<td>Create an access key for the AWS account root user.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>D<td>Create an access key for each privileged user.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4473-为什么题库会这样选>Q447.3-为什么题库会这样选<a href=#q4473-为什么题库会这样选 class=hash-link aria-label=Q447.3-为什么题库会这样选的直接链接 title=Q447.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：MFA：多因素认证，增强账号登录安全。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q448-iam-role-policy-mfa题>Q448-IAM-Role-Policy-MFA题<a href=#q448-iam-role-policy-mfa题 class=hash-link aria-label=Q448-IAM-Role-Policy-MFA题的直接链接 title=Q448-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which of the following are ways to improve security on AWS? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Using AWS Artifact</li>
+<li class="">B. Granting the broadest permissions to all IAM roles</li>
+<li class="">C. Running application code with AWS Cloud</li>
+<li class="">D. Enabling multi-factor authentication (MFA) with Amazon Cognito</li>
+<li class="">E. Using AWS Trusted Advisor security checks</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>DE</code>；</p>
+<p><strong>社区投票：</strong> DE 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4481-题干怎么拆>Q448.1-题干怎么拆<a href=#q4481-题干怎么拆 class=hash-link aria-label=Q448.1-题干怎么拆的直接链接 title=Q448.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4482-每个选项的定位>Q448.2-每个选项的定位<a href=#q4482-每个选项的定位 class=hash-link aria-label=Q448.2-每个选项的定位的直接链接 title=Q448.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Using AWS Artifact<td>AWS Artifact：按需访问 AWS 合规报告和部分协议的门户。<td>题库记录为非正确选项<tr><td>B<td>Granting the broadest permissions to all IAM roles<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>Running application code with AWS Cloud<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>Enabling multi-factor authentication (MFA) with Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。；MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项<tr><td>E<td>Using AWS Trusted Advisor security checks<td>AWS Trusted Advisor：根据 AWS 最佳实践提供成本、安全、性能、可靠性等检查建议。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4483-为什么题库会这样选>Q448.3-为什么题库会这样选<a href=#q4483-为什么题库会这样选 class=hash-link aria-label=Q448.3-为什么题库会这样选的直接链接 title=Q448.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。；MFA：多因素认证，增强账号登录安全。；AWS Trusted Advisor：根据 AWS 最佳实践提供成本、安全、性能、可靠性等检查建议。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q474-iam-role-policy-mfa题>Q474-IAM-Role-Policy-MFA题<a href=#q474-iam-role-policy-mfa题 class=hash-link aria-label=Q474-IAM-Role-Policy-MFA题的直接链接 title=Q474-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company needs to manage multiple logins across AWS accounts within the same organization in AWS Organizations. Which AWS service should the company use to meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon VPC</li>
+<li class="">B. Amazon GuardDuty</li>
+<li class="">C. Amazon Cognito</li>
+<li class="">D. AWS IAM Identity Center</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>需求/考点标签：</strong> Governance；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4741-题干怎么拆>Q474.1-题干怎么拆<a href=#q4741-题干怎么拆 class=hash-link aria-label=Q474.1-题干怎么拆的直接链接 title=Q474.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Governance</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4742-每个选项的定位>Q474.2-每个选项的定位<a href=#q4742-每个选项的定位 class=hash-link aria-label=Q474.2-每个选项的定位的直接链接 title=Q474.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon VPC<td>Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>B<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项<tr><td>C<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>D<td>AWS IAM Identity Center<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4743-为什么题库会这样选>Q474.3-为什么题库会这样选<a href=#q4743-为什么题库会这样选 class=hash-link aria-label=Q474.3-为什么题库会这样选的直接链接 title=Q474.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q477-iam-role-policy-mfa题>Q477-IAM-Role-Policy-MFA题<a href=#q477-iam-role-policy-mfa题 class=hash-link aria-label=Q477-IAM-Role-Policy-MFA题的直接链接 title=Q477-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company uses a third-party identity provider (IdP). The company wants to provide its employees with access to AWS accounts and services without requiring another set of login credentials. Which AWS service will meet this requirement?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Directory Service</li>
+<li class="">B. Amazon Cognito</li>
+<li class="">C. AWS IAM Identity Center</li>
+<li class="">D. AWS Resource Access Manager (AWS RAM)</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 76%, B 18%, A 6%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4771-题干怎么拆>Q477.1-题干怎么拆<a href=#q4771-题干怎么拆 class=hash-link aria-label=Q477.1-题干怎么拆的直接链接 title=Q477.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4772-每个选项的定位>Q477.2-每个选项的定位<a href=#q4772-每个选项的定位 class=hash-link aria-label=Q477.2-每个选项的定位的直接链接 title=Q477.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Directory Service<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Identity Center<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Resource Access Manager (AWS RAM)<td>AWS RAM：在账号/组织之间共享支持的 AWS 资源。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4773-为什么题库会这样选>Q477.3-为什么题库会这样选<a href=#q4773-为什么题库会这样选 class=hash-link aria-label=Q477.3-为什么题库会这样选的直接链接 title=Q477.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q482-iam-role-policy-mfa题>Q482-IAM-Role-Policy-MFA题<a href=#q482-iam-role-policy-mfa题 class=hash-link aria-label=Q482-IAM-Role-Policy-MFA题的直接链接 title=Q482-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which of the following are AWS best practice recommendations for the use of AWS Identity and Access Management (IAM)? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Use the AWS account root user for daily access.</li>
+<li class="">B. Use access keys and secret access keys on Amazon EC2.</li>
+<li class="">C. Rotate credentials on a regular basis.</li>
+<li class="">D. Create a shared set of access keys for system administrators.</li>
+<li class="">E. Configure multi-factor authentication (MFA).</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>CE</code>；</p>
+<p><strong>社区投票：</strong> CE 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4821-题干怎么拆>Q482.1-题干怎么拆<a href=#q4821-题干怎么拆 class=hash-link aria-label=Q482.1-题干怎么拆的直接链接 title=Q482.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4822-每个选项的定位>Q482.2-每个选项的定位<a href=#q4822-每个选项的定位 class=hash-link aria-label=Q482.2-每个选项的定位的直接链接 title=Q482.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Use the AWS account root user for daily access.<td>Root User 拥有账号最高级权限，应强保护并避免日常使用。<td>题库记录为非正确选项<tr><td>B<td>Use access keys and secret access keys on Amazon EC2.<td>Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。<td>题库记录为非正确选项<tr><td>C<td>Rotate credentials on a regular basis.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>Create a shared set of access keys for system administrators.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>E<td>Configure multi-factor authentication (MFA).<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4823-为什么题库会这样选>Q482.3-为什么题库会这样选<a href=#q4823-为什么题库会这样选 class=hash-link aria-label=Q482.3-为什么题库会这样选的直接链接 title=Q482.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。；MFA：多因素认证，增强账号登录安全。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q509-iam-role-policy-mfa题>Q509-IAM-Role-Policy-MFA题<a href=#q509-iam-role-policy-mfa题 class=hash-link aria-label=Q509-IAM-Role-Policy-MFA题的直接链接 title=Q509-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service supports user sign-up functionality and authentication to mobile and web applications?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Cognito</li>
+<li class="">B. AWS Config</li>
+<li class="">C. Amazon GuardDuty</li>
+<li class="">D. AWS Systems Manager</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5091-题干怎么拆>Q509.1-题干怎么拆<a href=#q5091-题干怎么拆 class=hash-link aria-label=Q509.1-题干怎么拆的直接链接 title=Q509.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5092-每个选项的定位>Q509.2-每个选项的定位<a href=#q5092-每个选项的定位 class=hash-link aria-label=Q509.2-每个选项的定位的直接链接 title=Q509.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为正确选项<tr><td>B<td>AWS Config<td>AWS Config：记录资源配置与变化，并可按规则检查配置合规性。<td>题库记录为非正确选项<tr><td>C<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项<tr><td>D<td>AWS Systems Manager<td>AWS Systems Manager：集中运维和自动化管理 AWS/混合环境中的节点与资源。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5093-为什么题库会这样选>Q509.3-为什么题库会这样选<a href=#q5093-为什么题库会这样选 class=hash-link aria-label=Q509.3-为什么题库会这样选的直接链接 title=Q509.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q534-iam-role-policy-mfa题>Q534-IAM-Role-Policy-MFA题<a href=#q534-iam-role-policy-mfa题 class=hash-link aria-label=Q534-IAM-Role-Policy-MFA题的直接链接 title=Q534-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A user has been granted permission to change their own IAM user password. Which AWS services can the user use to change the password? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Command Line Interface (AWS CLI)</li>
+<li class="">B. AWS Key Management Sen/ice (AWS KMS)</li>
+<li class="">C. AWS Management Console</li>
+<li class="">D. AWS Resource Access Manager (AWS RAM)</li>
+<li class="">E. AWS Secrets Manager</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>AC</code>；</p>
+<p><strong>社区投票：</strong> AC 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5341-题干怎么拆>Q534.1-题干怎么拆<a href=#q5341-题干怎么拆 class=hash-link aria-label=Q534.1-题干怎么拆的直接链接 title=Q534.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5342-每个选项的定位>Q534.2-每个选项的定位<a href=#q5342-每个选项的定位 class=hash-link aria-label=Q534.2-每个选项的定位的直接链接 title=Q534.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Command Line Interface (AWS CLI)<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>B<td>AWS Key Management Sen/ice (AWS KMS)<td>AWS KMS：集中创建、控制和使用加密密钥。<td>题库记录为非正确选项<tr><td>C<td>AWS Management Console<td>该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。<td>题库记录为正确选项<tr><td>D<td>AWS Resource Access Manager (AWS RAM)<td>AWS RAM：在账号/组织之间共享支持的 AWS 资源。<td>题库记录为非正确选项<tr><td>E<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5343-为什么题库会这样选>Q534.3-为什么题库会这样选<a href=#q5343-为什么题库会这样选 class=hash-link aria-label=Q534.3-为什么题库会这样选的直接链接 title=Q534.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。；该选项描述 Shared Responsibility 中 AWS 侧的基础设施责任。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q539-iam-role-policy-mfa题>Q539-IAM-Role-Policy-MFA题<a href=#q539-iam-role-policy-mfa题 class=hash-link aria-label=Q539-IAM-Role-Policy-MFA题的直接链接 title=Q539-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which guidelines are best practices for using AWS Identity and Access Management (IAM)? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Share access keys.</li>
+<li class="">B. Create individual IAM users.</li>
+<li class="">C. Use inline policies instead of customer managed policies.</li>
+<li class="">D. Grant maximum privileges to IAM users.</li>
+<li class="">E. Use groups to assign permissions to IAM users.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>BE</code>；</p>
+<p><strong>社区投票：</strong> BE 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5391-题干怎么拆>Q539.1-题干怎么拆<a href=#q5391-题干怎么拆 class=hash-link aria-label=Q539.1-题干怎么拆的直接链接 title=Q539.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5392-每个选项的定位>Q539.2-每个选项的定位<a href=#q5392-每个选项的定位 class=hash-link aria-label=Q539.2-每个选项的定位的直接链接 title=Q539.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Share access keys.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>Create individual IAM users.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>Use inline policies instead of customer managed policies.<td>该选项描述 Shared Responsibility 中客户侧的管理/安全责任。<td>题库记录为非正确选项<tr><td>D<td>Grant maximum privileges to IAM users.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>E<td>Use groups to assign permissions to IAM users.<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5393-为什么题库会这样选>Q539.3-为什么题库会这样选<a href=#q5393-为什么题库会这样选 class=hash-link aria-label=Q539.3-为什么题库会这样选的直接链接 title=Q539.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q571-iam-role-policy-mfa题>Q571-IAM-Role-Policy-MFA题<a href=#q571-iam-role-policy-mfa题 class=hash-link aria-label=Q571-IAM-Role-Policy-MFA题的直接链接 title=Q571-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to centrally manage its employee's access to multiple AWS accounts. Which AWS service or feature should the company use to meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Identity and Access Management Access Analyzer</li>
+<li class="">B. AWS Secrets Manager</li>
+<li class="">C. AWS IAM Identity Center</li>
+<li class="">D. AWS Security Token Service (AWS STS)</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5711-题干怎么拆>Q571.1-题干怎么拆<a href=#q5711-题干怎么拆 class=hash-link aria-label=Q571.1-题干怎么拆的直接链接 title=Q571.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5712-每个选项的定位>Q571.2-每个选项的定位<a href=#q5712-每个选项的定位 class=hash-link aria-label=Q571.2-每个选项的定位的直接链接 title=Q571.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Identity and Access Management Access Analyzer<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项<tr><td>C<td>AWS IAM Identity Center<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>AWS Security Token Service (AWS STS)<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5713-为什么题库会这样选>Q571.3-为什么题库会这样选<a href=#q5713-为什么题库会这样选 class=hash-link aria-label=Q571.3-为什么题库会这样选的直接链接 title=Q571.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q582-iam-role-policy-mfa题>Q582-IAM-Role-Policy-MFA题<a href=#q582-iam-role-policy-mfa题 class=hash-link aria-label=Q582-IAM-Role-Policy-MFA题的直接链接 title=Q582-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which of the following actions are controlled with AWS Identity and Access Management (IAM)? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Control access to AWS service APIs and to other specific resources.</li>
+<li class="">B. Provide intelligent threat detection and continuous monitoring.</li>
+<li class="">C. Protect the AWS environment using multi-factor authentication (MFA).</li>
+<li class="">D. Grant users access to AWS data centers.</li>
+<li class="">E. Provide firewall protection for applications from common web attacks.</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>AC</code>；</p>
+<p><strong>社区投票：</strong> AC 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5821-题干怎么拆>Q582.1-题干怎么拆<a href=#q5821-题干怎么拆 class=hash-link aria-label=Q582.1-题干怎么拆的直接链接 title=Q582.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5822-每个选项的定位>Q582.2-每个选项的定位<a href=#q5822-每个选项的定位 class=hash-link aria-label=Q582.2-每个选项的定位的直接链接 title=Q582.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Control access to AWS service APIs and to other specific resources.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>B<td>Provide intelligent threat detection and continuous monitoring.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>C<td>Protect the AWS environment using multi-factor authentication (MFA).<td>MFA：多因素认证，增强账号登录安全。<td>题库记录为正确选项<tr><td>D<td>Grant users access to AWS data centers.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>E<td>Provide firewall protection for applications from common web attacks.<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5823-为什么题库会这样选>Q582.3-为什么题库会这样选<a href=#q5823-为什么题库会这样选 class=hash-link aria-label=Q582.3-为什么题库会这样选的直接链接 title=Q582.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。；MFA：多因素认证，增强账号登录安全。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q584-iam-role-policy-mfa题>Q584-IAM-Role-Policy-MFA题<a href=#q584-iam-role-policy-mfa题 class=hash-link aria-label=Q584-IAM-Role-Policy-MFA题的直接链接 title=Q584-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is using AWS Identity and Access Management (IAM). Who can manage the access keys of the AWS account root user?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. IAM users in the same account that have been granted permission</li>
+<li class="">B. IAM roles in any account that have been granted permission</li>
+<li class="">C. IAM users and roles that have been granted permission</li>
+<li class="">D. The AWS account owner</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5841-题干怎么拆>Q584.1-题干怎么拆<a href=#q5841-题干怎么拆 class=hash-link aria-label=Q584.1-题干怎么拆的直接链接 title=Q584.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5842-每个选项的定位>Q584.2-每个选项的定位<a href=#q5842-每个选项的定位 class=hash-link aria-label=Q584.2-每个选项的定位的直接链接 title=Q584.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>IAM users in the same account that have been granted permission<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>B<td>IAM roles in any account that have been granted permission<td>IAM Role：可被用户、AWS 服务或联合身份临时承担的权限身份。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>C<td>IAM users and roles that have been granted permission<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>The AWS account owner<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5843-为什么题库会这样选>Q584.3-为什么题库会这样选<a href=#q5843-为什么题库会这样选 class=hash-link aria-label=Q584.3-为什么题库会这样选的直接链接 title=Q584.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q595-iam-role-policy-mfa题>Q595-IAM-Role-Policy-MFA题<a href=#q595-iam-role-policy-mfa题 class=hash-link aria-label=Q595-IAM-Role-Policy-MFA题的直接链接 title=Q595-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to manage access and permissions for its third-party software as a service (SaaS) applications. The company wants to use a portal where end users can access assigned AWS accounts and AWS Cloud applications. Which AWS service should the company use to meet these requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Cognito</li>
+<li class="">B. AWS IAM Identity Center (AWS Single Sign-On)</li>
+<li class="">C. AWS Identity and Access Management (IAM)</li>
+<li class="">D. AWS Directory Service for Microsoft Active Directory</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5951-题干怎么拆>Q595.1-题干怎么拆<a href=#q5951-题干怎么拆 class=hash-link aria-label=Q595.1-题干怎么拆的直接链接 title=Q595.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5952-每个选项的定位>Q595.2-每个选项的定位<a href=#q5952-每个选项的定位 class=hash-link aria-label=Q595.2-每个选项的定位的直接链接 title=Q595.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Cognito<td>Amazon Cognito：面向 Web/Mobile 应用终端用户的身份注册、登录与联合身份能力。<td>题库记录为非正确选项<tr><td>B<td>AWS IAM Identity Center (AWS Single Sign-On)<td>AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>D<td>AWS Directory Service for Microsoft Active Directory<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5953-为什么题库会这样选>Q595.3-为什么题库会这样选<a href=#q5953-为什么题库会这样选 class=hash-link aria-label=Q595.3-为什么题库会这样选的直接链接 title=Q595.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM Identity Center：集中管理多 AWS Account 和业务应用的员工访问。；AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q620-iam-role-policy-mfa题>Q620-IAM-Role-Policy-MFA题<a href=#q620-iam-role-policy-mfa题 class=hash-link aria-label=Q620-IAM-Role-Policy-MFA题的直接链接 title=Q620-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service is used to temporarily provide federated security credentials to access AWS resources?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon GuardDuty</li>
+<li class="">B. AWS Simple Token Service (AWS STS)</li>
+<li class="">C. AWS Secrets Manager</li>
+<li class="">D. AWS Certificate Manager</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6201-题干怎么拆>Q620.1-题干怎么拆<a href=#q6201-题干怎么拆 class=hash-link aria-label=Q620.1-题干怎么拆的直接链接 title=Q620.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6202-每个选项的定位>Q620.2-每个选项的定位<a href=#q6202-每个选项的定位 class=hash-link aria-label=Q620.2-每个选项的定位的直接链接 title=Q620.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项<tr><td>B<td>AWS Simple Token Service (AWS STS)<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>C<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项<tr><td>D<td>AWS Certificate Manager<td>AWS Certificate Manager：供应和管理 TLS/SSL 证书。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6203-为什么题库会这样选>Q620.3-为什么题库会这样选<a href=#q6203-为什么题库会这样选 class=hash-link aria-label=Q620.3-为什么题库会这样选的直接链接 title=Q620.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q650-iam-role-policy-mfa题>Q650-IAM-Role-Policy-MFA题<a href=#q650-iam-role-policy-mfa题 class=hash-link aria-label=Q650-IAM-Role-Policy-MFA题的直接链接 title=Q650-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service is always available free of charge to users?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Athena</li>
+<li class="">B. AWS Identity and Access Management (IAM)</li>
+<li class="">C. AWS Secrets Manager</li>
+<li class="">D. Amazon ElastiCache</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6501-题干怎么拆>Q650.1-题干怎么拆<a href=#q6501-题干怎么拆 class=hash-link aria-label=Q650.1-题干怎么拆的直接链接 title=Q650.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6502-每个选项的定位>Q650.2-每个选项的定位<a href=#q6502-每个选项的定位 class=hash-link aria-label=Q650.2-每个选项的定位的直接链接 title=Q650.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Athena<td>Amazon Athena：Serverless 交互式 SQL 查询服务，典型为直接查询 S3 数据。<td>题库记录为非正确选项<tr><td>B<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>C<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项<tr><td>D<td>Amazon ElastiCache<td>Amazon ElastiCache：托管内存缓存，用于降低数据库压力并提高热点数据访问速度。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6503-为什么题库会这样选>Q650.3-为什么题库会这样选<a href=#q6503-为什么题库会这样选 class=hash-link aria-label=Q650.3-为什么题库会这样选的直接链接 title=Q650.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q656-iam-role-policy-mfa题>Q656-IAM-Role-Policy-MFA题<a href=#q656-iam-role-policy-mfa题 class=hash-link aria-label=Q656-IAM-Role-Policy-MFA题的直接链接 title=Q656-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> In which situations should a company create an IAM user instead of an IAM role?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. When an application that runs on Amazon EC2 instances requires access to other AWS services</li>
+<li class="">B. When the company creates AWS access credentials for individuals</li>
+<li class="">C. When the company creates an application that runs on a mobile phone that makes requests to AWS</li>
+<li class="">D. When the company needs to add users to IAM groups</li>
+<li class="">E. When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 50%, D 50%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6561-题干怎么拆>Q656.1-题干怎么拆<a href=#q6561-题干怎么拆 class=hash-link aria-label=Q656.1-题干怎么拆的直接链接 title=Q656.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6562-每个选项的定位>Q656.2-每个选项的定位<a href=#q6562-每个选项的定位 class=hash-link aria-label=Q656.2-每个选项的定位的直接链接 title=Q656.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>When an application that runs on Amazon EC2 instances requires access to other AWS services<td>Amazon EC2：可配置虚拟服务器，适合需要 OS/实例级控制的计算工作负载。<td>题库记录为非正确选项<tr><td>B<td>When the company creates AWS access credentials for individuals<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>C<td>When the company creates an application that runs on a mobile phone that makes requests to AWS<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>When the company needs to add users to IAM groups<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为非正确选项<tr><td>E<td>When users are authenticated in the corporate network and want to be able to use AWS without having to sign in a<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6563-为什么题库会这样选>Q656.3-为什么题库会这样选<a href=#q6563-为什么题库会这样选 class=hash-link aria-label=Q656.3-为什么题库会这样选的直接链接 title=Q656.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6564--争议版本提示>Q656.4-⚠-争议/版本提示<a href=#q6564--争议版本提示 class=hash-link aria-label=Q656.4-⚠-争议/版本提示的直接链接 title=Q656.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区投票分散，最高项仅 50%</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q716-iam-role-policy-mfa题>Q716-IAM-Role-Policy-MFA题<a href=#q716-iam-role-policy-mfa题 class=hash-link aria-label=Q716-IAM-Role-Policy-MFA题的直接链接 title=Q716-IAM-Role-Policy-MFA题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service can manage permissions for AWS resources by using policies?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Inspector</li>
+<li class="">B. Amazon Detective</li>
+<li class="">C. AWS Identity and Access Management (IAM)</li>
+<li class="">D. Amazon GuardDuty</li>
+</ul>
+<p><strong>主分类：</strong> C4-14 IAM-Role-Policy-MFA题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q7161-题干怎么拆>Q716.1-题干怎么拆<a href=#q7161-题干怎么拆 class=hash-link aria-label=Q716.1-题干怎么拆的直接链接 title=Q716.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q7162-每个选项的定位>Q716.2-每个选项的定位<a href=#q7162-每个选项的定位 class=hash-link aria-label=Q716.2-每个选项的定位的直接链接 title=Q716.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Inspector<td>Amazon Inspector：持续漏洞管理与工作负载漏洞扫描。<td>题库记录为非正确选项<tr><td>B<td>Amazon Detective<td>Amazon Detective：基于安全数据帮助调查潜在安全事件和根因。<td>题库记录为非正确选项<tr><td>C<td>AWS Identity and Access Management (IAM)<td>AWS IAM：AWS 身份、认证授权与权限策略核心服务。<td>题库记录为正确选项<tr><td>D<td>Amazon GuardDuty<td>Amazon GuardDuty：基于多种日志与威胁情报进行持续威胁检测。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q7163-为什么题库会这样选>Q716.3-为什么题库会这样选<a href=#q7163-为什么题库会这样选 class=hash-link aria-label=Q716.3-为什么题库会这样选的直接链接 title=Q716.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS IAM：AWS 身份、认证授权与权限策略核心服务。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-13-Route53-CloudFront与全球网络题><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>C4-13-Route53-CloudFront与全球网络题</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-15-Shared-Responsibility题><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>C4-15-Shared-Responsibility题</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#q26-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q26-IAM-Role-Policy-MFA题</a><ul><li><a href=#q261-题干怎么拆 class="table-of-contents__link toc-highlight">Q26.1-题干怎么拆</a><li><a href=#q262-每个选项的定位 class="table-of-contents__link toc-highlight">Q26.2-每个选项的定位</a><li><a href=#q263-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q26.3-为什么题库会这样选</a></ul><li><a href=#q36-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q36-IAM-Role-Policy-MFA题</a><ul><li><a href=#q361-题干怎么拆 class="table-of-contents__link toc-highlight">Q36.1-题干怎么拆</a><li><a href=#q362-每个选项的定位 class="table-of-contents__link toc-highlight">Q36.2-每个选项的定位</a><li><a href=#q363-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q36.3-为什么题库会这样选</a></ul><li><a href=#q39-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q39-IAM-Role-Policy-MFA题</a><ul><li><a href=#q391-题干怎么拆 class="table-of-contents__link toc-highlight">Q39.1-题干怎么拆</a><li><a href=#q392-每个选项的定位 class="table-of-contents__link toc-highlight">Q39.2-每个选项的定位</a><li><a href=#q393-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q39.3-为什么题库会这样选</a></ul><li><a href=#q52-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q52-IAM-Role-Policy-MFA题</a><ul><li><a href=#q521-题干怎么拆 class="table-of-contents__link toc-highlight">Q52.1-题干怎么拆</a><li><a href=#q522-每个选项的定位 class="table-of-contents__link toc-highlight">Q52.2-每个选项的定位</a><li><a href=#q523-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q52.3-为什么题库会这样选</a></ul><li><a href=#q54-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q54-IAM-Role-Policy-MFA题</a><ul><li><a href=#q541-题干怎么拆 class="table-of-contents__link toc-highlight">Q54.1-题干怎么拆</a><li><a href=#q542-每个选项的定位 class="table-of-contents__link toc-highlight">Q54.2-每个选项的定位</a><li><a href=#q543-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q54.3-为什么题库会这样选</a></ul><li><a href=#q94-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q94-IAM-Role-Policy-MFA题</a><ul><li><a href=#q941-题干怎么拆 class="table-of-contents__link toc-highlight">Q94.1-题干怎么拆</a><li><a href=#q942-每个选项的定位 class="table-of-contents__link toc-highlight">Q94.2-每个选项的定位</a><li><a href=#q943-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q94.3-为什么题库会这样选</a></ul><li><a href=#q98-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q98-IAM-Role-Policy-MFA题</a><ul><li><a href=#q981-题干怎么拆 class="table-of-contents__link toc-highlight">Q98.1-题干怎么拆</a><li><a href=#q982-每个选项的定位 class="table-of-contents__link toc-highlight">Q98.2-每个选项的定位</a><li><a href=#q983-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q98.3-为什么题库会这样选</a><li><a href=#q984--争议版本提示 class="table-of-contents__link toc-highlight">Q98.4-⚠-争议/版本提示</a></ul><li><a href=#q99-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q99-IAM-Role-Policy-MFA题</a><ul><li><a href=#q991-题干怎么拆 class="table-of-contents__link toc-highlight">Q99.1-题干怎么拆</a><li><a href=#q992-每个选项的定位 class="table-of-contents__link toc-highlight">Q99.2-每个选项的定位</a><li><a href=#q993-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q99.3-为什么题库会这样选</a></ul><li><a href=#q106-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q106-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1061-题干怎么拆 class="table-of-contents__link toc-highlight">Q106.1-题干怎么拆</a><li><a href=#q1062-每个选项的定位 class="table-of-contents__link toc-highlight">Q106.2-每个选项的定位</a><li><a href=#q1063-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q106.3-为什么题库会这样选</a><li><a href=#q1064--争议版本提示 class="table-of-contents__link toc-highlight">Q106.4-⚠-争议/版本提示</a></ul><li><a href=#q108-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q108-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1081-题干怎么拆 class="table-of-contents__link toc-highlight">Q108.1-题干怎么拆</a><li><a href=#q1082-每个选项的定位 class="table-of-contents__link toc-highlight">Q108.2-每个选项的定位</a><li><a href=#q1083-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q108.3-为什么题库会这样选</a><li><a href=#q1084--争议版本提示 class="table-of-contents__link toc-highlight">Q108.4-⚠-争议/版本提示</a></ul><li><a href=#q149-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q149-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1491-题干怎么拆 class="table-of-contents__link toc-highlight">Q149.1-题干怎么拆</a><li><a href=#q1492-每个选项的定位 class="table-of-contents__link toc-highlight">Q149.2-每个选项的定位</a><li><a href=#q1493-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q149.3-为什么题库会这样选</a></ul><li><a href=#q160-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q160-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1601-题干怎么拆 class="table-of-contents__link toc-highlight">Q160.1-题干怎么拆</a><li><a href=#q1602-每个选项的定位 class="table-of-contents__link toc-highlight">Q160.2-每个选项的定位</a><li><a href=#q1603-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q160.3-为什么题库会这样选</a></ul><li><a href=#q165-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q165-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1651-题干怎么拆 class="table-of-contents__link toc-highlight">Q165.1-题干怎么拆</a><li><a href=#q1652-每个选项的定位 class="table-of-contents__link toc-highlight">Q165.2-每个选项的定位</a><li><a href=#q1653-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q165.3-为什么题库会这样选</a></ul><li><a href=#q168-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q168-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1681-题干怎么拆 class="table-of-contents__link toc-highlight">Q168.1-题干怎么拆</a><li><a href=#q1682-每个选项的定位 class="table-of-contents__link toc-highlight">Q168.2-每个选项的定位</a><li><a href=#q1683-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q168.3-为什么题库会这样选</a></ul><li><a href=#q170-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q170-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1701-题干怎么拆 class="table-of-contents__link toc-highlight">Q170.1-题干怎么拆</a><li><a href=#q1702-每个选项的定位 class="table-of-contents__link toc-highlight">Q170.2-每个选项的定位</a><li><a href=#q1703-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q170.3-为什么题库会这样选</a><li><a href=#q1704--争议版本提示 class="table-of-contents__link toc-highlight">Q170.4-⚠-争议/版本提示</a></ul><li><a href=#q177-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q177-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1771-题干怎么拆 class="table-of-contents__link toc-highlight">Q177.1-题干怎么拆</a><li><a href=#q1772-每个选项的定位 class="table-of-contents__link toc-highlight">Q177.2-每个选项的定位</a><li><a href=#q1773-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q177.3-为什么题库会这样选</a><li><a href=#q1774--争议版本提示 class="table-of-contents__link toc-highlight">Q177.4-⚠-争议/版本提示</a></ul><li><a href=#q192-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q192-IAM-Role-Policy-MFA题</a><ul><li><a href=#q1921-题干怎么拆 class="table-of-contents__link toc-highlight">Q192.1-题干怎么拆</a><li><a href=#q1922-每个选项的定位 class="table-of-contents__link toc-highlight">Q192.2-每个选项的定位</a><li><a href=#q1923-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q192.3-为什么题库会这样选</a></ul><li><a href=#q202-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q202-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2021-题干怎么拆 class="table-of-contents__link toc-highlight">Q202.1-题干怎么拆</a><li><a href=#q2022-每个选项的定位 class="table-of-contents__link toc-highlight">Q202.2-每个选项的定位</a><li><a href=#q2023-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q202.3-为什么题库会这样选</a></ul><li><a href=#q216-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q216-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2161-题干怎么拆 class="table-of-contents__link toc-highlight">Q216.1-题干怎么拆</a><li><a href=#q2162-每个选项的定位 class="table-of-contents__link toc-highlight">Q216.2-每个选项的定位</a><li><a href=#q2163-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q216.3-为什么题库会这样选</a><li><a href=#q2164--争议版本提示 class="table-of-contents__link toc-highlight">Q216.4-⚠-争议/版本提示</a></ul><li><a href=#q220-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q220-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2201-题干怎么拆 class="table-of-contents__link toc-highlight">Q220.1-题干怎么拆</a><li><a href=#q2202-每个选项的定位 class="table-of-contents__link toc-highlight">Q220.2-每个选项的定位</a><li><a href=#q2203-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q220.3-为什么题库会这样选</a></ul><li><a href=#q234-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q234-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2341-题干怎么拆 class="table-of-contents__link toc-highlight">Q234.1-题干怎么拆</a><li><a href=#q2342-每个选项的定位 class="table-of-contents__link toc-highlight">Q234.2-每个选项的定位</a><li><a href=#q2343-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q234.3-为什么题库会这样选</a></ul><li><a href=#q279-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q279-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2791-题干怎么拆 class="table-of-contents__link toc-highlight">Q279.1-题干怎么拆</a><li><a href=#q2792-每个选项的定位 class="table-of-contents__link toc-highlight">Q279.2-每个选项的定位</a><li><a href=#q2793-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q279.3-为什么题库会这样选</a></ul><li><a href=#q283-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q283-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2831-题干怎么拆 class="table-of-contents__link toc-highlight">Q283.1-题干怎么拆</a><li><a href=#q2832-每个选项的定位 class="table-of-contents__link toc-highlight">Q283.2-每个选项的定位</a><li><a href=#q2833-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q283.3-为什么题库会这样选</a></ul><li><a href=#q288-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q288-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2881-题干怎么拆 class="table-of-contents__link toc-highlight">Q288.1-题干怎么拆</a><li><a href=#q2882-每个选项的定位 class="table-of-contents__link toc-highlight">Q288.2-每个选项的定位</a><li><a href=#q2883-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q288.3-为什么题库会这样选</a></ul><li><a href=#q296-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q296-IAM-Role-Policy-MFA题</a><ul><li><a href=#q2961-题干怎么拆 class="table-of-contents__link toc-highlight">Q296.1-题干怎么拆</a><li><a href=#q2962-每个选项的定位 class="table-of-contents__link toc-highlight">Q296.2-每个选项的定位</a><li><a href=#q2963-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q296.3-为什么题库会这样选</a></ul><li><a href=#q301-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q301-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3011-题干怎么拆 class="table-of-contents__link toc-highlight">Q301.1-题干怎么拆</a><li><a href=#q3012-每个选项的定位 class="table-of-contents__link toc-highlight">Q301.2-每个选项的定位</a><li><a href=#q3013-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q301.3-为什么题库会这样选</a></ul><li><a href=#q306-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q306-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3061-题干怎么拆 class="table-of-contents__link toc-highlight">Q306.1-题干怎么拆</a><li><a href=#q3062-每个选项的定位 class="table-of-contents__link toc-highlight">Q306.2-每个选项的定位</a><li><a href=#q3063-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q306.3-为什么题库会这样选</a></ul><li><a href=#q336-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q336-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3361-题干怎么拆 class="table-of-contents__link toc-highlight">Q336.1-题干怎么拆</a><li><a href=#q3362-每个选项的定位 class="table-of-contents__link toc-highlight">Q336.2-每个选项的定位</a><li><a href=#q3363-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q336.3-为什么题库会这样选</a></ul><li><a href=#q339-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q339-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3391-题干怎么拆 class="table-of-contents__link toc-highlight">Q339.1-题干怎么拆</a><li><a href=#q3392-每个选项的定位 class="table-of-contents__link toc-highlight">Q339.2-每个选项的定位</a><li><a href=#q3393-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q339.3-为什么题库会这样选</a></ul><li><a href=#q343-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q343-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3431-题干怎么拆 class="table-of-contents__link toc-highlight">Q343.1-题干怎么拆</a><li><a href=#q3432-每个选项的定位 class="table-of-contents__link toc-highlight">Q343.2-每个选项的定位</a><li><a href=#q3433-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q343.3-为什么题库会这样选</a></ul><li><a href=#q348-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q348-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3481-题干怎么拆 class="table-of-contents__link toc-highlight">Q348.1-题干怎么拆</a><li><a href=#q3482-每个选项的定位 class="table-of-contents__link toc-highlight">Q348.2-每个选项的定位</a><li><a href=#q3483-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q348.3-为什么题库会这样选</a></ul><li><a href=#q385-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q385-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3851-题干怎么拆 class="table-of-contents__link toc-highlight">Q385.1-题干怎么拆</a><li><a href=#q3852-每个选项的定位 class="table-of-contents__link toc-highlight">Q385.2-每个选项的定位</a><li><a href=#q3853-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q385.3-为什么题库会这样选</a></ul><li><a href=#q391-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q391-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3911-题干怎么拆 class="table-of-contents__link toc-highlight">Q391.1-题干怎么拆</a><li><a href=#q3912-每个选项的定位 class="table-of-contents__link toc-highlight">Q391.2-每个选项的定位</a><li><a href=#q3913-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q391.3-为什么题库会这样选</a></ul><li><a href=#q392-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q392-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3921-题干怎么拆 class="table-of-contents__link toc-highlight">Q392.1-题干怎么拆</a><li><a href=#q3922-每个选项的定位 class="table-of-contents__link toc-highlight">Q392.2-每个选项的定位</a><li><a href=#q3923-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q392.3-为什么题库会这样选</a></ul><li><a href=#q394-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q394-IAM-Role-Policy-MFA题</a><ul><li><a href=#q3941-题干怎么拆 class="table-of-contents__link toc-highlight">Q394.1-题干怎么拆</a><li><a href=#q3942-每个选项的定位 class="table-of-contents__link toc-highlight">Q394.2-每个选项的定位</a><li><a href=#q3943-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q394.3-为什么题库会这样选</a></ul><li><a href=#q409-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q409-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4091-题干怎么拆 class="table-of-contents__link toc-highlight">Q409.1-题干怎么拆</a><li><a href=#q4092-每个选项的定位 class="table-of-contents__link toc-highlight">Q409.2-每个选项的定位</a><li><a href=#q4093-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q409.3-为什么题库会这样选</a></ul><li><a href=#q428-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q428-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4281-题干怎么拆 class="table-of-contents__link toc-highlight">Q428.1-题干怎么拆</a><li><a href=#q4282-每个选项的定位 class="table-of-contents__link toc-highlight">Q428.2-每个选项的定位</a><li><a href=#q4283-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q428.3-为什么题库会这样选</a></ul><li><a href=#q433-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q433-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4331-题干怎么拆 class="table-of-contents__link toc-highlight">Q433.1-题干怎么拆</a><li><a href=#q4332-每个选项的定位 class="table-of-contents__link toc-highlight">Q433.2-每个选项的定位</a><li><a href=#q4333-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q433.3-为什么题库会这样选</a></ul><li><a href=#q447-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q447-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4471-题干怎么拆 class="table-of-contents__link toc-highlight">Q447.1-题干怎么拆</a><li><a href=#q4472-每个选项的定位 class="table-of-contents__link toc-highlight">Q447.2-每个选项的定位</a><li><a href=#q4473-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q447.3-为什么题库会这样选</a></ul><li><a href=#q448-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q448-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4481-题干怎么拆 class="table-of-contents__link toc-highlight">Q448.1-题干怎么拆</a><li><a href=#q4482-每个选项的定位 class="table-of-contents__link toc-highlight">Q448.2-每个选项的定位</a><li><a href=#q4483-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q448.3-为什么题库会这样选</a></ul><li><a href=#q474-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q474-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4741-题干怎么拆 class="table-of-contents__link toc-highlight">Q474.1-题干怎么拆</a><li><a href=#q4742-每个选项的定位 class="table-of-contents__link toc-highlight">Q474.2-每个选项的定位</a><li><a href=#q4743-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q474.3-为什么题库会这样选</a></ul><li><a href=#q477-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q477-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4771-题干怎么拆 class="table-of-contents__link toc-highlight">Q477.1-题干怎么拆</a><li><a href=#q4772-每个选项的定位 class="table-of-contents__link toc-highlight">Q477.2-每个选项的定位</a><li><a href=#q4773-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q477.3-为什么题库会这样选</a></ul><li><a href=#q482-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q482-IAM-Role-Policy-MFA题</a><ul><li><a href=#q4821-题干怎么拆 class="table-of-contents__link toc-highlight">Q482.1-题干怎么拆</a><li><a href=#q4822-每个选项的定位 class="table-of-contents__link toc-highlight">Q482.2-每个选项的定位</a><li><a href=#q4823-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q482.3-为什么题库会这样选</a></ul><li><a href=#q509-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q509-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5091-题干怎么拆 class="table-of-contents__link toc-highlight">Q509.1-题干怎么拆</a><li><a href=#q5092-每个选项的定位 class="table-of-contents__link toc-highlight">Q509.2-每个选项的定位</a><li><a href=#q5093-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q509.3-为什么题库会这样选</a></ul><li><a href=#q534-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q534-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5341-题干怎么拆 class="table-of-contents__link toc-highlight">Q534.1-题干怎么拆</a><li><a href=#q5342-每个选项的定位 class="table-of-contents__link toc-highlight">Q534.2-每个选项的定位</a><li><a href=#q5343-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q534.3-为什么题库会这样选</a></ul><li><a href=#q539-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q539-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5391-题干怎么拆 class="table-of-contents__link toc-highlight">Q539.1-题干怎么拆</a><li><a href=#q5392-每个选项的定位 class="table-of-contents__link toc-highlight">Q539.2-每个选项的定位</a><li><a href=#q5393-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q539.3-为什么题库会这样选</a></ul><li><a href=#q571-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q571-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5711-题干怎么拆 class="table-of-contents__link toc-highlight">Q571.1-题干怎么拆</a><li><a href=#q5712-每个选项的定位 class="table-of-contents__link toc-highlight">Q571.2-每个选项的定位</a><li><a href=#q5713-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q571.3-为什么题库会这样选</a></ul><li><a href=#q582-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q582-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5821-题干怎么拆 class="table-of-contents__link toc-highlight">Q582.1-题干怎么拆</a><li><a href=#q5822-每个选项的定位 class="table-of-contents__link toc-highlight">Q582.2-每个选项的定位</a><li><a href=#q5823-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q582.3-为什么题库会这样选</a></ul><li><a href=#q584-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q584-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5841-题干怎么拆 class="table-of-contents__link toc-highlight">Q584.1-题干怎么拆</a><li><a href=#q5842-每个选项的定位 class="table-of-contents__link toc-highlight">Q584.2-每个选项的定位</a><li><a href=#q5843-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q584.3-为什么题库会这样选</a></ul><li><a href=#q595-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q595-IAM-Role-Policy-MFA题</a><ul><li><a href=#q5951-题干怎么拆 class="table-of-contents__link toc-highlight">Q595.1-题干怎么拆</a><li><a href=#q5952-每个选项的定位 class="table-of-contents__link toc-highlight">Q595.2-每个选项的定位</a><li><a href=#q5953-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q595.3-为什么题库会这样选</a></ul><li><a href=#q620-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q620-IAM-Role-Policy-MFA题</a><ul><li><a href=#q6201-题干怎么拆 class="table-of-contents__link toc-highlight">Q620.1-题干怎么拆</a><li><a href=#q6202-每个选项的定位 class="table-of-contents__link toc-highlight">Q620.2-每个选项的定位</a><li><a href=#q6203-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q620.3-为什么题库会这样选</a></ul><li><a href=#q650-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q650-IAM-Role-Policy-MFA题</a><ul><li><a href=#q6501-题干怎么拆 class="table-of-contents__link toc-highlight">Q650.1-题干怎么拆</a><li><a href=#q6502-每个选项的定位 class="table-of-contents__link toc-highlight">Q650.2-每个选项的定位</a><li><a href=#q6503-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q650.3-为什么题库会这样选</a></ul><li><a href=#q656-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q656-IAM-Role-Policy-MFA题</a><ul><li><a href=#q6561-题干怎么拆 class="table-of-contents__link toc-highlight">Q656.1-题干怎么拆</a><li><a href=#q6562-每个选项的定位 class="table-of-contents__link toc-highlight">Q656.2-每个选项的定位</a><li><a href=#q6563-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q656.3-为什么题库会这样选</a><li><a href=#q6564--争议版本提示 class="table-of-contents__link toc-highlight">Q656.4-⚠-争议/版本提示</a></ul><li><a href=#q716-iam-role-policy-mfa题 class="table-of-contents__link toc-highlight">Q716-IAM-Role-Policy-MFA题</a><ul><li><a href=#q7161-题干怎么拆 class="table-of-contents__link toc-highlight">Q716.1-题干怎么拆</a><li><a href=#q7162-每个选项的定位 class="table-of-contents__link toc-highlight">Q716.2-每个选项的定位</a><li><a href=#q7163-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q716.3-为什么题库会这样选</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>学习</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/dazi-learn-docs/docs/aws/clf-c02>AWS-CLF-C02</a><li class=footer__item><a class=footer__link-item href=/dazi-learn-docs/practice/aws-clf-c02>练习中心</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Dazi-Learn-Docs</div></div></div></footer></div></body>

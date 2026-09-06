@@ -1,0 +1,352 @@
+<!doctype html><html lang=zh-Hans dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.10.2"><title data-rh=true>C4-12-DirectConnect-VPN-TransitGateway题 | Dazi-Learn-Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题 /><meta data-rh=true property=og:locale content=zh_Hans /><meta data-rh=true name=docusaurus_locale content=zh-Hans /><meta data-rh=true name=docsearch:language content=zh-Hans /><meta data-rh=true name=docusaurus_version content=current /><meta data-rh=true name=docusaurus_tag content=docs-default-current /><meta data-rh=true name=docsearch:version content=current /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-current /><meta data-rh=true property=og:title content="C4-12-DirectConnect-VPN-TransitGateway题 | Dazi-Learn-Docs"/><meta data-rh=true name=description content="资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 correct_answer、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 [UPDATED]、[LEGACY]、[CURRENT-OUT-OF-SCOPE] 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。"/><meta data-rh=true property=og:description content="资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 correct_answer、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 [UPDATED]、[LEGACY]、[CURRENT-OUT-OF-SCOPE] 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。"/><link data-rh=true rel=icon href=/dazi-learn-docs/img/favicon.ico /><link data-rh=true rel=canonical href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题 /><link data-rh=true rel=alternate href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题 hreflang=zh-Hans /><link data-rh=true rel=alternate href=https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题 hreflang=x-default /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02","name":"CLF-C02云从业者","position":1},{"@type":"ListItem","item":"https://weizhiqimail.github.io/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题","name":"C4-12-DirectConnect-VPN-TransitGateway题","position":2}]}</script><link rel=stylesheet href=/dazi-learn-docs/assets/css/styles.ba2d3fd6.css /><script src=/dazi-learn-docs/assets/js/runtime~main.da108f3c.js defer></script><script src=/dazi-learn-docs/assets/js/main.323e40cb.js defer></script></head><body><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme-53e")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/dazi-learn-docs/img/logo.svg /><div role=region aria-label=跳到主要内容><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>跳到主要内容</a></div><nav aria-label=主导航 class="theme-layout-navbar navbar navbar--fixed-top"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label=切换导航栏 aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/dazi-learn-docs/><div class=navbar__logo><img src=/dazi-learn-docs/img/logo.svg alt=Dazi-Learn-Docs class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/dazi-learn-docs/img/logo.svg alt=Dazi-Learn-Docs class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">Dazi-Learn-Docs</b></a><a aria-current=page class="navbar__item navbar__link navbar__link--active" href=/dazi-learn-docs/docs/aws/clf-c02>知识模块</a><a class="navbar__item navbar__link" href=/dazi-learn-docs/practice/aws-clf-c02>练习中心</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href=https://github.com/ target=_blank rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width=13.5 height=13.5 aria-label="(opens in new tab)" class=iconExternalLink_nPIU><use href=#theme-svg-external-link /></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="system mode" aria-label="切换浅色/暗黑模式（当前为system mode）"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label=回到顶部 class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class=sidebar_njMd><nav aria-label=文档侧边栏 class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true href=/dazi-learn-docs/docs/aws/clf-c02><span class=categoryLinkLabel_W154>AWS</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02><span class=categoryLinkLabel_W154>CLF-C02云从业者</span></a><button aria-label="折叠侧边栏分类 'CLF-C02云从业者'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C1-总述/C1-01-阅读说明与资料来源><span class=categoryLinkLabel_W154>C1-总述</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C2-AWS知识体系/C2-01-云计算核心概念与全球基础设施><span class=categoryLinkLabel_W154>C2-AWS知识体系</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C3-架构与业务场景/C3-01-GlobalShop完整基础架构><span class=categoryLinkLabel_W154>C3-架构与业务场景</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role=button aria-expanded=true tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-00-719题索引与分类规则><span class=categoryLinkLabel_W154>C4-719题分类解析</span></a></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-00-719题索引与分类规则><span class=linkLabel_WmDU>C4-00-719题索引与分类规则</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-01-云计算价值与基础概念题><span class=linkLabel_WmDU>C4-01-云计算价值与基础概念题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-02-Region-AZ-高可用与灾备题><span class=linkLabel_WmDU>C4-02-Region-AZ-高可用与灾备题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-03-EC2-AMI与计算服务题><span class=linkLabel_WmDU>C4-03-EC2-AMI与计算服务题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-04-EC2计费与容量选择题><span class=linkLabel_WmDU>C4-04-EC2计费与容量选择题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-05-S3对象存储与Storage-Class题><span class=linkLabel_WmDU>C4-05-S3对象存储与Storage-Class题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-06-EBS-EFS-FSx与存储对比题><span class=linkLabel_WmDU>C4-06-EBS-EFS-FSx与存储对比题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-07-Storage-Gateway-Backup-Snow题><span class=linkLabel_WmDU>C4-07-Storage-Gateway-Backup-Snow题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-08-RDS-Aurora与关系数据库题><span class=linkLabel_WmDU>C4-08-RDS-Aurora与关系数据库题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-09-DynamoDB-NoSQL-缓存与数据库选择题><span class=linkLabel_WmDU>C4-09-DynamoDB-NoSQL-缓存与数据库选择题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-10-VPC-Subnet-路由与基础网络题><span class=linkLabel_WmDU>C4-10-VPC-Subnet-路由与基础网络题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-11-Gateway-Endpoint-Peering-PrivateLink题><span class=linkLabel_WmDU>C4-11-Gateway-Endpoint-Peering-PrivateLink题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-12-DirectConnect-VPN-TransitGateway题><span class=linkLabel_WmDU>C4-12-DirectConnect-VPN-TransitGateway题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-13-Route53-CloudFront与全球网络题><span class=linkLabel_WmDU>C4-13-Route53-CloudFront与全球网络题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-14-IAM-Role-Policy-MFA题><span class=linkLabel_WmDU>C4-14-IAM-Role-Policy-MFA题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-15-Shared-Responsibility题><span class=linkLabel_WmDU>C4-15-Shared-Responsibility题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-16-KMS-Secrets-加密与凭证题><span class=linkLabel_WmDU>C4-16-KMS-Secrets-加密与凭证题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-17-GuardDuty-Inspector-Macie等安全题><span class=linkLabel_WmDU>C4-17-GuardDuty-Inspector-Macie等安全题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-18-WAF-Shield与网络安全题><span class=linkLabel_WmDU>C4-18-WAF-Shield与网络安全题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-19-CloudWatch-CloudTrail-Config题><span class=linkLabel_WmDU>C4-19-CloudWatch-CloudTrail-Config题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-20-Organizations-治理-IaC题><span class=linkLabel_WmDU>C4-20-Organizations-治理-IaC题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-21-SQS-SNS-EventBridge应用集成题><span class=linkLabel_WmDU>C4-21-SQS-SNS-EventBridge应用集成题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-22-Migration与Hybrid-Cloud题><span class=linkLabel_WmDU>C4-22-Migration与Hybrid-Cloud题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-23-Analytics-AI-ML-IoT题><span class=linkLabel_WmDU>C4-23-Analytics-AI-ML-IoT题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-24-Cost-Billing-Pricing题><span class=linkLabel_WmDU>C4-24-Cost-Billing-Pricing题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-25-AWS-Support与客户资源题><span class=linkLabel_WmDU>C4-25-AWS-Support与客户资源题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-26-CAF-Well-Architected题><span class=linkLabel_WmDU>C4-26-CAF-Well-Architected题</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-27-旧题争议题与当前AWS差异><span class=linkLabel_WmDU>C4-27-旧题、争议题与当前-AWS-差异</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class=menu__link tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4><span class=linkLabel_WmDU>C4-719题分类解析</span></a></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C5-频率统计与强化/C5-01-统计方法与分类规则><span class=categoryLinkLabel_W154>C5-频率统计与强化</span></a></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/dazi-learn-docs/docs/aws/clf-c02/C6-总结与考前复习/C6-01-AWS完整架构总图><span class=categoryLinkLabel_W154>C6-总结与考前复习</span></a></div></ul></ul></ul></nav></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=页面路径><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label=主页面 class=breadcrumbs__link href=/dazi-learn-docs/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><span class=breadcrumbs__link>AWS</span><li class=breadcrumbs__item><a class=breadcrumbs__link href=/dazi-learn-docs/docs/aws/clf-c02><span>CLF-C02云从业者</span></a><li class=breadcrumbs__item><span class=breadcrumbs__link>C4-719题分类解析</span><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>C4-12-DirectConnect-VPN-TransitGateway题</span></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">本页总览</button></div><div class="theme-doc-markdown markdown"><header><h1>C4-12-DirectConnect-VPN-TransitGateway题</h1></header>
+<blockquote>
+<p>资料口径：本模块以用户提供的 719 道 CLF-C02 题库与前序 C1/C2 项目资料为基础。题库的 <code>correct_answer</code>、社区投票与评论用于发现考点和争议，不自动等于当前 AWS 官方结论；本模块没有在生成过程中擅自用外部常识覆盖题库内容。凡现有项目已经明确标记为 <code>[UPDATED]</code>、<code>[LEGACY]</code>、<code>[CURRENT-OUT-OF-SCOPE]</code> 的内容，会继续保留这些状态提示。正式考试前，涉及当前产品状态和 Support 计划等时效信息仍应再对照 AWS 官方页面。</p>
+</blockquote>
+<p>本文件共收录 <strong>17</strong> 道主分类题。范围：Direct Connect、VPN、Transit Gateway、本地与多 VPC 连接。</p>
+<blockquote>
+<p>注意：这里的“正确”指题库 <code>correct_answer</code> 记录。若题目存在明显争议/历史差异，会明确标记并同时收入 C4-27。</p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q21-directconnect-vpn-transitgateway题>Q21-DirectConnect-VPN-TransitGateway题<a href=#q21-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q21-DirectConnect-VPN-TransitGateway题的直接链接 title=Q21-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature allows a user to establish a dedicated network connection between a company’s on-premises data center and the AWS Cloud?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Direct Connect</li>
+<li class="">B. VPC peering</li>
+<li class="">C. AWS VPN</li>
+<li class="">D. Amazon Route 53</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>需求/考点标签：</strong> 本地到AWS专线；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q211-题干怎么拆>Q21.1-题干怎么拆<a href=#q211-题干怎么拆 class=hash-link aria-label=Q21.1-题干怎么拆的直接链接 title=Q21.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>本地到AWS专线</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q212-每个选项的定位>Q21.2-每个选项的定位<a href=#q212-每个选项的定位 class=hash-link aria-label=Q21.2-每个选项的定位的直接链接 title=Q21.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>B<td>VPC peering<td>VPC Peering：两个 VPC 之间的点到点私网连接。；Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>C<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>D<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q213-为什么题库会这样选>Q21.3-为什么题库会这样选<a href=#q213-为什么题库会这样选 class=hash-link aria-label=Q21.3-为什么题库会这样选的直接链接 title=Q21.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q64-directconnect-vpn-transitgateway题>Q64-DirectConnect-VPN-TransitGateway题<a href=#q64-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q64-DirectConnect-VPN-TransitGateway题的直接链接 title=Q64-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to provide managed Windows virtual desktops and applications to its remote employees over secure network connections. Which AWS services can the company use to meet these requirements? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Connect</li>
+<li class="">B. Amazon AppStream 2.0</li>
+<li class="">C. Amazon WorkSpaces</li>
+<li class="">D. AWS Site-to-Site VPN</li>
+<li class="">E. Amazon Elastic Container Service (Amazon ECS)</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>BC</code>；</p>
+<p><strong>社区投票：</strong> BC 66%, CD 34%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q641-题干怎么拆>Q64.1-题干怎么拆<a href=#q641-题干怎么拆 class=hash-link aria-label=Q64.1-题干怎么拆的直接链接 title=Q64.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q642-每个选项的定位>Q64.2-每个选项的定位<a href=#q642-每个选项的定位 class=hash-link aria-label=Q64.2-每个选项的定位的直接链接 title=Q64.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项<tr><td>B<td>Amazon AppStream 2.0<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>C<td>Amazon WorkSpaces<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>D<td>AWS Site-to-Site VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>E<td>Amazon Elastic Container Service (Amazon ECS)<td>Amazon ECS：AWS 原生托管容器编排服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q643-为什么题库会这样选>Q64.3-为什么题库会这样选<a href=#q643-为什么题库会这样选 class=hash-link aria-label=Q64.3-为什么题库会这样选的直接链接 title=Q64.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。；该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q644--争议版本提示>Q64.4-⚠-争议/版本提示<a href=#q644--争议版本提示 class=hash-link aria-label=Q64.4-⚠-争议/版本提示的直接链接 title=Q64.4-⚠-争议/版本提示的直接链接 translate=no>​</a></h3>
+<ul>
+<li class="">社区投票分散，最高项仅 66%</li>
+<li class="">本题同时收录到 <code>C4-27-旧题争议题与当前AWS差异.md</code>，不在这里强行替题库修正答案。</li>
+</ul>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q70-directconnect-vpn-transitgateway题>Q70-DirectConnect-VPN-TransitGateway题<a href=#q70-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q70-DirectConnect-VPN-TransitGateway题的直接链接 title=Q70-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A network engineer needs to build a hybrid cloud architecture connecting on-premises networks to the AWS Cloud using AWS Direct Connect. The company has a few VPCs in a single AWS Region and expects to increase the number of VPCs to hundreds over time. Which AWS service or feature should the engineer use to simplify and scale this connectivity as the VPCs increase in number?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. VPC endpoints</li>
+<li class="">B. AWS Transit Gateway</li>
+<li class="">C. Amazon Route 53</li>
+<li class="">D. AWS Secrets Manager</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> 本地到AWS专线；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q701-题干怎么拆>Q70.1-题干怎么拆<a href=#q701-题干怎么拆 class=hash-link aria-label=Q70.1-题干怎么拆的直接链接 title=Q70.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>本地到AWS专线</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q702-每个选项的定位>Q70.2-每个选项的定位<a href=#q702-每个选项的定位 class=hash-link aria-label=Q70.2-每个选项的定位的直接链接 title=Q70.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>VPC endpoints<td>VPC Endpoint：让 VPC 私网访问支持的 AWS 服务，而无需经过公共 Internet。；Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>B<td>AWS Transit Gateway<td>AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。<td>题库记录为正确选项<tr><td>C<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项<tr><td>D<td>AWS Secrets Manager<td>AWS Secrets Manager：安全保存、检索和轮换数据库密码/API Key 等 Secret。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q703-为什么题库会这样选>Q70.3-为什么题库会这样选<a href=#q703-为什么题库会这样选 class=hash-link aria-label=Q70.3-为什么题库会这样选的直接链接 title=Q70.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q73-directconnect-vpn-transitgateway题>Q73-DirectConnect-VPN-TransitGateway题<a href=#q73-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q73-DirectConnect-VPN-TransitGateway题的直接链接 title=Q73-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature can be used to create a private connection between an on-premises workload and an AWS Cloud workload?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Route 53</li>
+<li class="">B. Amazon Macie</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. AWS PrivateLink</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> C 77%, D 23%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q731-题干怎么拆>Q73.1-题干怎么拆<a href=#q731-题干怎么拆 class=hash-link aria-label=Q73.1-题干怎么拆的直接链接 title=Q73.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q732-每个选项的定位>Q73.2-每个选项的定位<a href=#q732-每个选项的定位 class=hash-link aria-label=Q73.2-每个选项的定位的直接链接 title=Q73.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项<tr><td>B<td>Amazon Macie<td>Amazon Macie：发现和保护 S3 中的敏感数据。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>AWS PrivateLink<td>AWS PrivateLink：通过私有 IP/接口 Endpoint 私下发布和访问服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q733-为什么题库会这样选>Q73.3-为什么题库会这样选<a href=#q733-为什么题库会这样选 class=hash-link aria-label=Q73.3-为什么题库会这样选的直接链接 title=Q73.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q125-directconnect-vpn-transitgateway题>Q125-DirectConnect-VPN-TransitGateway题<a href=#q125-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q125-DirectConnect-VPN-TransitGateway题的直接链接 title=Q125-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants a unified tool to provide a consistent method to interact with AWS services. Which AWS service or tool will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS CLI</li>
+<li class="">B. Amazon Elastic Container Service (Amazon ECS)</li>
+<li class="">C. AWS Cloud9</li>
+<li class="">D. AWS Virtual Private Network (AWS VPN)</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1251-题干怎么拆>Q125.1-题干怎么拆<a href=#q1251-题干怎么拆 class=hash-link aria-label=Q125.1-题干怎么拆的直接链接 title=Q125.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1252-每个选项的定位>Q125.2-每个选项的定位<a href=#q1252-每个选项的定位 class=hash-link aria-label=Q125.2-每个选项的定位的直接链接 title=Q125.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS CLI<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为正确选项<tr><td>B<td>Amazon Elastic Container Service (Amazon ECS)<td>Amazon ECS：AWS 原生托管容器编排服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Cloud9<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>D<td>AWS Virtual Private Network (AWS VPN)<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1253-为什么题库会这样选>Q125.3-为什么题库会这样选<a href=#q1253-为什么题库会这样选 class=hash-link aria-label=Q125.3-为什么题库会这样选的直接链接 title=Q125.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q181-directconnect-vpn-transitgateway题>Q181-DirectConnect-VPN-TransitGateway题<a href=#q181-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q181-DirectConnect-VPN-TransitGateway题的直接链接 title=Q181-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS services or features enable users to connect on-premises networks to a VPC? (Choose two.)；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS VPN</li>
+<li class="">B. Elastic Load Balancing</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. VPC peering</li>
+<li class="">E. Amazon CloudFront</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>AC</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> AC 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1811-题干怎么拆>Q181.1-题干怎么拆<a href=#q1811-题干怎么拆 class=hash-link aria-label=Q181.1-题干怎么拆的直接链接 title=Q181.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1812-每个选项的定位>Q181.2-每个选项的定位<a href=#q1812-每个选项的定位 class=hash-link aria-label=Q181.2-每个选项的定位的直接链接 title=Q181.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为正确选项<tr><td>B<td>Elastic Load Balancing<td>Elastic Load Balancing：在多个后端目标间分发流量并提高可用性。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>VPC peering<td>VPC Peering：两个 VPC 之间的点到点私网连接。；Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>E<td>Amazon CloudFront<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q1813-为什么题库会这样选>Q181.3-为什么题库会这样选<a href=#q1813-为什么题库会这样选 class=hash-link aria-label=Q181.3-为什么题库会这样选的直接链接 title=Q181.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。；AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q326-directconnect-vpn-transitgateway题>Q326-DirectConnect-VPN-TransitGateway题<a href=#q326-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q326-DirectConnect-VPN-TransitGateway题的直接链接 title=Q326-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to establish a private network connection between AWS and its corporate network. Which AWS service or feature will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Amazon Connect</li>
+<li class="">B. Amazon Route 53</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. VPC peering</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Disaster Recovery；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3261-题干怎么拆>Q326.1-题干怎么拆<a href=#q3261-题干怎么拆 class=hash-link aria-label=Q326.1-题干怎么拆的直接链接 title=Q326.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Disaster Recovery</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3262-每个选项的定位>Q326.2-每个选项的定位<a href=#q3262-每个选项的定位 class=hash-link aria-label=Q326.2-每个选项的定位的直接链接 title=Q326.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项<tr><td>B<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>VPC peering<td>VPC Peering：两个 VPC 之间的点到点私网连接。；Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3263-为什么题库会这样选>Q326.3-为什么题库会这样选<a href=#q3263-为什么题库会这样选 class=hash-link aria-label=Q326.3-为什么题库会这样选的直接链接 title=Q326.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q357-directconnect-vpn-transitgateway题>Q357-DirectConnect-VPN-TransitGateway题<a href=#q357-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q357-DirectConnect-VPN-TransitGateway题的直接链接 title=Q357-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company needs to connect its on-premises data center to the AWS Cloud. The company needs a dedicated, low-latency connection with consistent network performance. Which AWS service will meet these requirements?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Global Accelerator</li>
+<li class="">B. Amazon CloudFront</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. AWS Managed VPN</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3571-题干怎么拆>Q357.1-题干怎么拆<a href=#q3571-题干怎么拆 class=hash-link aria-label=Q357.1-题干怎么拆的直接链接 title=Q357.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3572-每个选项的定位>Q357.2-每个选项的定位<a href=#q3572-每个选项的定位 class=hash-link aria-label=Q357.2-每个选项的定位的直接链接 title=Q357.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Global Accelerator<td>AWS Global Accelerator：利用 AWS 全球网络和 Anycast 静态 IP 改善全球应用访问路径。<td>题库记录为非正确选项<tr><td>B<td>Amazon CloudFront<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>AWS Managed VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q3573-为什么题库会这样选>Q357.3-为什么题库会这样选<a href=#q3573-为什么题库会这样选 class=hash-link aria-label=Q357.3-为什么题库会这样选的直接链接 title=Q357.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q443-directconnect-vpn-transitgateway题>Q443-DirectConnect-VPN-TransitGateway题<a href=#q443-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q443-DirectConnect-VPN-TransitGateway题的直接链接 title=Q443-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature gives users the ability to connect VPCs and on-premises networks to a central hub?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Virtual private gateway</li>
+<li class="">B. AWS Transit Gateway</li>
+<li class="">C. Internet gateway</li>
+<li class="">D. Customer gateway</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> B 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4431-题干怎么拆>Q443.1-题干怎么拆<a href=#q4431-题干怎么拆 class=hash-link aria-label=Q443.1-题干怎么拆的直接链接 title=Q443.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4432-每个选项的定位>Q443.2-每个选项的定位<a href=#q4432-每个选项的定位 class=hash-link aria-label=Q443.2-每个选项的定位的直接链接 title=Q443.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Virtual private gateway<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>B<td>AWS Transit Gateway<td>AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。<td>题库记录为正确选项<tr><td>C<td>Internet gateway<td>Internet Gateway：VPC 与公网 Internet 之间的网关组件。<td>题库记录为非正确选项<tr><td>D<td>Customer gateway<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4433-为什么题库会这样选>Q443.3-为什么题库会这样选<a href=#q4433-为什么题库会这样选 class=hash-link aria-label=Q443.3-为什么题库会这样选的直接链接 title=Q443.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q445-directconnect-vpn-transitgateway题>Q445-DirectConnect-VPN-TransitGateway题<a href=#q445-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q445-DirectConnect-VPN-TransitGateway题的直接链接 title=Q445-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is connecting multiple VPCs and on-premises networks. The company needs to use an AWS service as a cloud router to simplify peering relationships. Which AWS service can the company use to meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Direct Connect</li>
+<li class="">B. AWS Transit Gateway</li>
+<li class="">C. Amazon Connect</li>
+<li class="">D. Amazon Route 53</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> B 86%, A 14%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4451-题干怎么拆>Q445.1-题干怎么拆<a href=#q4451-题干怎么拆 class=hash-link aria-label=Q445.1-题干怎么拆的直接链接 title=Q445.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4452-每个选项的定位>Q445.2-每个选项的定位<a href=#q4452-每个选项的定位 class=hash-link aria-label=Q445.2-每个选项的定位的直接链接 title=Q445.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为非正确选项<tr><td>B<td>AWS Transit Gateway<td>AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。<td>题库记录为正确选项<tr><td>C<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项<tr><td>D<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4453-为什么题库会这样选>Q445.3-为什么题库会这样选<a href=#q4453-为什么题库会这样选 class=hash-link aria-label=Q445.3-为什么题库会这样选的直接链接 title=Q445.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q466-directconnect-vpn-transitgateway题>Q466-DirectConnect-VPN-TransitGateway题<a href=#q466-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q466-DirectConnect-VPN-TransitGateway题的直接链接 title=Q466-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company is building AWS architecture to deliver real-time data feeds from an on-premises data center into an application that runs on AWS. The company needs a consistent network connection with minimal latency. What should the company use to connect the application and the data center to meet these requirements?</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Direct Connect</li>
+<li class="">B. Public internet</li>
+<li class="">C. AWS VPN</li>
+<li class="">D. Amazon Connect</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>A</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> A 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4661-题干怎么拆>Q466.1-题干怎么拆<a href=#q4661-题干怎么拆 class=hash-link aria-label=Q466.1-题干怎么拆的直接链接 title=Q466.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4662-每个选项的定位>Q466.2-每个选项的定位<a href=#q4662-每个选项的定位 class=hash-link aria-label=Q466.2-每个选项的定位的直接链接 title=Q466.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>B<td>Public internet<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项<tr><td>C<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>D<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4663-为什么题库会这样选>Q466.3-为什么题库会这样选<a href=#q4663-为什么题库会这样选 class=hash-link aria-label=Q466.3-为什么题库会这样选的直接链接 title=Q466.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q471-directconnect-vpn-transitgateway题>Q471-DirectConnect-VPN-TransitGateway题<a href=#q471-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q471-DirectConnect-VPN-TransitGateway题的直接链接 title=Q471-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service or feature requires an internet service provider (ISP) and a colocation facility to be implemented?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS VPN</li>
+<li class="">B. Amazon Connect</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. Internet gateway</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4711-题干怎么拆>Q471.1-题干怎么拆<a href=#q4711-题干怎么拆 class=hash-link aria-label=Q471.1-题干怎么拆的直接链接 title=Q471.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4712-每个选项的定位>Q471.2-每个选项的定位<a href=#q4712-每个选项的定位 class=hash-link aria-label=Q471.2-每个选项的定位的直接链接 title=Q471.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>B<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>Internet gateway<td>Internet Gateway：VPC 与公网 Internet 之间的网关组件。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q4713-为什么题库会这样选>Q471.3-为什么题库会这样选<a href=#q4713-为什么题库会这样选 class=hash-link aria-label=Q471.3-为什么题库会这样选的直接链接 title=Q471.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q547-directconnect-vpn-transitgateway题>Q547-DirectConnect-VPN-TransitGateway题<a href=#q547-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q547-DirectConnect-VPN-TransitGateway题的直接链接 title=Q547-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to maintain bandwidth throughput and provide a more consistent network experience than public internet- based connections. Which AWS service should the company choose?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS VPN</li>
+<li class="">B. AWS Direct Connect</li>
+<li class="">C. Amazon Connect</li>
+<li class="">D. Amazon CloudFront</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>B</code>；</p>
+<p><strong>社区投票：</strong> B 80%, D 20%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5471-题干怎么拆>Q547.1-题干怎么拆<a href=#q5471-题干怎么拆 class=hash-link aria-label=Q547.1-题干怎么拆的直接链接 title=Q547.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5472-每个选项的定位>Q547.2-每个选项的定位<a href=#q5472-每个选项的定位 class=hash-link aria-label=Q547.2-每个选项的定位的直接链接 title=Q547.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>B<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>C<td>Amazon Connect<td>Amazon Connect：云联络中心服务。<td>题库记录为非正确选项<tr><td>D<td>Amazon CloudFront<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q5473-为什么题库会这样选>Q547.3-为什么题库会这样选<a href=#q5473-为什么题库会这样选 class=hash-link aria-label=Q547.3-为什么题库会这样选的直接链接 title=Q547.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q608-directconnect-vpn-transitgateway题>Q608-DirectConnect-VPN-TransitGateway题<a href=#q608-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q608-DirectConnect-VPN-TransitGateway题的直接链接 title=Q608-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to set up a secure network connection from on premises to the AWS Cloud within 1 week. Which solution will meet these requirements?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Direct Connect</li>
+<li class="">B. Amazon VPC</li>
+<li class="">C. AWS Site-to-Site VPN</li>
+<li class="">D. Edge location</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6081-题干怎么拆>Q608.1-题干怎么拆<a href=#q6081-题干怎么拆 class=hash-link aria-label=Q608.1-题干怎么拆的直接链接 title=Q608.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6082-每个选项的定位>Q608.2-每个选项的定位<a href=#q6082-每个选项的定位 class=hash-link aria-label=Q608.2-每个选项的定位的直接链接 title=Q608.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为非正确选项<tr><td>B<td>Amazon VPC<td>Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>C<td>AWS Site-to-Site VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为正确选项<tr><td>D<td>Edge location<td>该选项是题库中的概念/服务描述；现有源资料未提供独立 explanation，需要结合题干目标与其他选项定位比较。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6083-为什么题库会这样选>Q608.3-为什么题库会这样选<a href=#q6083-为什么题库会这样选 class=hash-link aria-label=Q608.3-为什么题库会这样选的直接链接 title=Q608.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q616-directconnect-vpn-transitgateway题>Q616-DirectConnect-VPN-TransitGateway题<a href=#q616-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q616-DirectConnect-VPN-TransitGateway题的直接链接 title=Q616-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company needs to set up dedicated network connectivity between its on-premises data center and the AWS Cloud. The network cannot use the public internet. Which AWS service or feature will meet these requirements?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Transit Gateway</li>
+<li class="">B. AWS VPN</li>
+<li class="">C. Amazon CloudFront</li>
+<li class="">D. AWS Direct Connect</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>D</code>；</p>
+<p><strong>需求/考点标签：</strong> 本地到AWS专线；</p>
+<p><strong>社区投票：</strong> D 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6161-题干怎么拆>Q616.1-题干怎么拆<a href=#q6161-题干怎么拆 class=hash-link aria-label=Q616.1-题干怎么拆的直接链接 title=Q616.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>本地到AWS专线</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6162-每个选项的定位>Q616.2-每个选项的定位<a href=#q6162-每个选项的定位 class=hash-link aria-label=Q616.2-每个选项的定位的直接链接 title=Q616.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Transit Gateway<td>AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。<td>题库记录为非正确选项<tr><td>B<td>AWS VPN<td>AWS Site-to-Site VPN：通过 Internet 建立加密隧道连接本地网络与 AWS。<td>题库记录为非正确选项<tr><td>C<td>Amazon CloudFront<td>Amazon CloudFront：AWS CDN，利用 Edge Location 缓存和分发内容。<td>题库记录为非正确选项<tr><td>D<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6163-为什么题库会这样选>Q616.3-为什么题库会这样选<a href=#q6163-为什么题库会这样选 class=hash-link aria-label=Q616.3-为什么题库会这样选的直接链接 title=Q616.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q630-directconnect-vpn-transitgateway题>Q630-DirectConnect-VPN-TransitGateway题<a href=#q630-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q630-DirectConnect-VPN-TransitGateway题的直接链接 title=Q630-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> Which AWS service can create a private network connection from on premises to the AWS Cloud?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. AWS Config</li>
+<li class="">B. Virtual Private Cloud (Amazon VPC)</li>
+<li class="">C. AWS Direct Connect</li>
+<li class="">D. Amazon Route 53</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>需求/考点标签：</strong> Hybrid Cloud；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6301-题干怎么拆>Q630.1-题干怎么拆<a href=#q6301-题干怎么拆 class=hash-link aria-label=Q630.1-题干怎么拆的直接链接 title=Q630.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>这道题先识别的不是某个服务名，而是这些约束：<strong>Hybrid Cloud</strong>。判断时应该先找到与这些约束同层、同数据模型或同运维目标的服务，再排除“看起来也属于 AWS，但解决的是另一个层面问题”的选项。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6302-每个选项的定位>Q630.2-每个选项的定位<a href=#q6302-每个选项的定位 class=hash-link aria-label=Q630.2-每个选项的定位的直接链接 title=Q630.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>AWS Config<td>AWS Config：记录资源配置与变化，并可按规则检查配置合规性。<td>题库记录为非正确选项<tr><td>B<td>Virtual Private Cloud (Amazon VPC)<td>Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>C<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为正确选项<tr><td>D<td>Amazon Route 53<td>Amazon Route 53：AWS 托管 DNS 与 DNS 路由服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6303-为什么题库会这样选>Q630.3-为什么题库会这样选<a href=#q6303-为什么题库会这样选 class=hash-link aria-label=Q630.3-为什么题库会这样选的直接链接 title=Q630.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id=q653-directconnect-vpn-transitgateway题>Q653-DirectConnect-VPN-TransitGateway题<a href=#q653-directconnect-vpn-transitgateway题 class=hash-link aria-label=Q653-DirectConnect-VPN-TransitGateway题的直接链接 title=Q653-DirectConnect-VPN-TransitGateway题的直接链接 translate=no>​</a></h2>
+<p><strong>题目：</strong> A company wants to use an AWS networking solution that can act as a centralized gateway between multiple VPCs and on- premises networks. Which AWS service or feature will meet this requirement?；</p>
+<p><strong>选项：</strong></p>
+<ul>
+<li class="">A. Gateway VPC endpoint</li>
+<li class="">B. AWS Direct Connect</li>
+<li class="">C. AWS Transit Gateway</li>
+<li class="">D. AWS PrivateLink</li>
+</ul>
+<p><strong>主分类：</strong> C4-12 DirectConnect-VPN-TransitGateway题；</p>
+<p><strong>题库记录答案：</strong> <code>C</code>；</p>
+<p><strong>社区投票：</strong> C 100%</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6531-题干怎么拆>Q653.1-题干怎么拆<a href=#q6531-题干怎么拆 class=hash-link aria-label=Q653.1-题干怎么拆的直接链接 title=Q653.1-题干怎么拆的直接链接 translate=no>​</a></h3>
+<p>现有题库没有提供独立 explanation；这里按题干中的动作、对象和所有选项的服务定位进行比较。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6532-每个选项的定位>Q653.2-每个选项的定位<a href=#q6532-每个选项的定位 class=hash-link aria-label=Q653.2-每个选项的定位的直接链接 title=Q653.2-每个选项的定位的直接链接 translate=no>​</a></h3>
+<table><thead><tr><th>选项<th>题库内容<th>服务/概念定位<th>题库答案关系<tbody><tr><td>A<td>Gateway VPC endpoint<td>VPC Endpoint：让 VPC 私网访问支持的 AWS 服务，而无需经过公共 Internet。；Amazon VPC：AWS 中用户定义的逻辑隔离虚拟网络。<td>题库记录为非正确选项<tr><td>B<td>AWS Direct Connect<td>AWS Direct Connect：客户网络到 AWS 的专用网络连接，适合稳定、长期、可预测链路需求。<td>题库记录为非正确选项<tr><td>C<td>AWS Transit Gateway<td>AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。<td>题库记录为正确选项<tr><td>D<td>AWS PrivateLink<td>AWS PrivateLink：通过私有 IP/接口 Endpoint 私下发布和访问服务。<td>题库记录为非正确选项</table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id=q6533-为什么题库会这样选>Q653.3-为什么题库会这样选<a href=#q6533-为什么题库会这样选 class=hash-link aria-label=Q653.3-为什么题库会这样选的直接链接 title=Q653.3-为什么题库会这样选的直接链接 translate=no>​</a></h3>
+<p>题库记录的正确选项定位为：AWS Transit Gateway：连接多个 VPC 与本地网络的中心 Hub/云路由器。。它与题干要求的对象/约束直接对应。其余选项虽然可能也属于同一大类，但主要解决不同问题。</p>
+<hr/></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label=文件选项卡><a class="pagination-nav__link pagination-nav__link--prev" href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-11-Gateway-Endpoint-Peering-PrivateLink题><div class=pagination-nav__sublabel>上一页</div><div class=pagination-nav__label>C4-11-Gateway-Endpoint-Peering-PrivateLink题</div></a><a class="pagination-nav__link pagination-nav__link--next" href=/dazi-learn-docs/docs/aws/clf-c02/C4-719题分类解析/C4-13-Route53-CloudFront与全球网络题><div class=pagination-nav__sublabel>下一页</div><div class=pagination-nav__label>C4-13-Route53-CloudFront与全球网络题</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href=#q21-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q21-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q211-题干怎么拆 class="table-of-contents__link toc-highlight">Q21.1-题干怎么拆</a><li><a href=#q212-每个选项的定位 class="table-of-contents__link toc-highlight">Q21.2-每个选项的定位</a><li><a href=#q213-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q21.3-为什么题库会这样选</a></ul><li><a href=#q64-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q64-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q641-题干怎么拆 class="table-of-contents__link toc-highlight">Q64.1-题干怎么拆</a><li><a href=#q642-每个选项的定位 class="table-of-contents__link toc-highlight">Q64.2-每个选项的定位</a><li><a href=#q643-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q64.3-为什么题库会这样选</a><li><a href=#q644--争议版本提示 class="table-of-contents__link toc-highlight">Q64.4-⚠-争议/版本提示</a></ul><li><a href=#q70-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q70-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q701-题干怎么拆 class="table-of-contents__link toc-highlight">Q70.1-题干怎么拆</a><li><a href=#q702-每个选项的定位 class="table-of-contents__link toc-highlight">Q70.2-每个选项的定位</a><li><a href=#q703-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q70.3-为什么题库会这样选</a></ul><li><a href=#q73-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q73-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q731-题干怎么拆 class="table-of-contents__link toc-highlight">Q73.1-题干怎么拆</a><li><a href=#q732-每个选项的定位 class="table-of-contents__link toc-highlight">Q73.2-每个选项的定位</a><li><a href=#q733-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q73.3-为什么题库会这样选</a></ul><li><a href=#q125-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q125-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q1251-题干怎么拆 class="table-of-contents__link toc-highlight">Q125.1-题干怎么拆</a><li><a href=#q1252-每个选项的定位 class="table-of-contents__link toc-highlight">Q125.2-每个选项的定位</a><li><a href=#q1253-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q125.3-为什么题库会这样选</a></ul><li><a href=#q181-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q181-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q1811-题干怎么拆 class="table-of-contents__link toc-highlight">Q181.1-题干怎么拆</a><li><a href=#q1812-每个选项的定位 class="table-of-contents__link toc-highlight">Q181.2-每个选项的定位</a><li><a href=#q1813-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q181.3-为什么题库会这样选</a></ul><li><a href=#q326-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q326-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q3261-题干怎么拆 class="table-of-contents__link toc-highlight">Q326.1-题干怎么拆</a><li><a href=#q3262-每个选项的定位 class="table-of-contents__link toc-highlight">Q326.2-每个选项的定位</a><li><a href=#q3263-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q326.3-为什么题库会这样选</a></ul><li><a href=#q357-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q357-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q3571-题干怎么拆 class="table-of-contents__link toc-highlight">Q357.1-题干怎么拆</a><li><a href=#q3572-每个选项的定位 class="table-of-contents__link toc-highlight">Q357.2-每个选项的定位</a><li><a href=#q3573-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q357.3-为什么题库会这样选</a></ul><li><a href=#q443-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q443-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q4431-题干怎么拆 class="table-of-contents__link toc-highlight">Q443.1-题干怎么拆</a><li><a href=#q4432-每个选项的定位 class="table-of-contents__link toc-highlight">Q443.2-每个选项的定位</a><li><a href=#q4433-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q443.3-为什么题库会这样选</a></ul><li><a href=#q445-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q445-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q4451-题干怎么拆 class="table-of-contents__link toc-highlight">Q445.1-题干怎么拆</a><li><a href=#q4452-每个选项的定位 class="table-of-contents__link toc-highlight">Q445.2-每个选项的定位</a><li><a href=#q4453-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q445.3-为什么题库会这样选</a></ul><li><a href=#q466-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q466-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q4661-题干怎么拆 class="table-of-contents__link toc-highlight">Q466.1-题干怎么拆</a><li><a href=#q4662-每个选项的定位 class="table-of-contents__link toc-highlight">Q466.2-每个选项的定位</a><li><a href=#q4663-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q466.3-为什么题库会这样选</a></ul><li><a href=#q471-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q471-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q4711-题干怎么拆 class="table-of-contents__link toc-highlight">Q471.1-题干怎么拆</a><li><a href=#q4712-每个选项的定位 class="table-of-contents__link toc-highlight">Q471.2-每个选项的定位</a><li><a href=#q4713-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q471.3-为什么题库会这样选</a></ul><li><a href=#q547-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q547-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q5471-题干怎么拆 class="table-of-contents__link toc-highlight">Q547.1-题干怎么拆</a><li><a href=#q5472-每个选项的定位 class="table-of-contents__link toc-highlight">Q547.2-每个选项的定位</a><li><a href=#q5473-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q547.3-为什么题库会这样选</a></ul><li><a href=#q608-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q608-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q6081-题干怎么拆 class="table-of-contents__link toc-highlight">Q608.1-题干怎么拆</a><li><a href=#q6082-每个选项的定位 class="table-of-contents__link toc-highlight">Q608.2-每个选项的定位</a><li><a href=#q6083-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q608.3-为什么题库会这样选</a></ul><li><a href=#q616-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q616-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q6161-题干怎么拆 class="table-of-contents__link toc-highlight">Q616.1-题干怎么拆</a><li><a href=#q6162-每个选项的定位 class="table-of-contents__link toc-highlight">Q616.2-每个选项的定位</a><li><a href=#q6163-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q616.3-为什么题库会这样选</a></ul><li><a href=#q630-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q630-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q6301-题干怎么拆 class="table-of-contents__link toc-highlight">Q630.1-题干怎么拆</a><li><a href=#q6302-每个选项的定位 class="table-of-contents__link toc-highlight">Q630.2-每个选项的定位</a><li><a href=#q6303-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q630.3-为什么题库会这样选</a></ul><li><a href=#q653-directconnect-vpn-transitgateway题 class="table-of-contents__link toc-highlight">Q653-DirectConnect-VPN-TransitGateway题</a><ul><li><a href=#q6531-题干怎么拆 class="table-of-contents__link toc-highlight">Q653.1-题干怎么拆</a><li><a href=#q6532-每个选项的定位 class="table-of-contents__link toc-highlight">Q653.2-每个选项的定位</a><li><a href=#q6533-为什么题库会这样选 class="table-of-contents__link toc-highlight">Q653.3-为什么题库会这样选</a></ul></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class=footer__title>学习</div><ul class="footer__items clean-list"><li class=footer__item><a class=footer__link-item href=/dazi-learn-docs/docs/aws/clf-c02>AWS-CLF-C02</a><li class=footer__item><a class=footer__link-item href=/dazi-learn-docs/practice/aws-clf-c02>练习中心</a></ul></div></div><div class="footer__bottom text--center"><div class=footer__copyright>Copyright © 2026 Dazi-Learn-Docs</div></div></div></footer></div></body>
