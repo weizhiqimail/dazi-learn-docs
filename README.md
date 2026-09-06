@@ -4,7 +4,8 @@
 
 ## 在线访问
 
-- 网站：[https://dazi-learn-docs.pages.dev/](https://dazi-learn-docs.pages.dev/)
+- 主站（Cloudflare Pages）：[https://dazi-learn-docs.pages.dev/](https://dazi-learn-docs.pages.dev/)
+- 备用站（GitHub Pages）：[https://weizhiqimail.github.io/dazi-learn-docs/](https://weizhiqimail.github.io/dazi-learn-docs/)
 - AWS-CLF-C02文档：[https://dazi-learn-docs.pages.dev/docs/aws/clf-c02](https://dazi-learn-docs.pages.dev/docs/aws/clf-c02)
 - AWS-CLF-C02做题模式：[https://dazi-learn-docs.pages.dev/practice/aws-clf-c02](https://dazi-learn-docs.pages.dev/practice/aws-clf-c02)
 

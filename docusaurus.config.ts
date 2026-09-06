@@ -1,1 +1,54 @@
-import{themes as prismThemes}from'prism-react-renderer';import type{Config}from'@docusaurus/types';import type*as Preset from'@docusaurus/preset-classic';const baseUrl=process.env.BASE_URL||'/';const config:Config={title:'Dazi-Learn-Docs',tagline:'技术知识与练习平台',favicon:'img/favicon.ico',future:{v4:true},url:process.env.SITE_URL||'https://dazi-learn-docs.pages.dev',baseUrl,organizationName:process.env.GITHUB_OWNER||'weizhiqimail',projectName:'dazi-learn-docs',trailingSlash:false,onBrokenLinks:'warn',i18n:{defaultLocale:'zh-Hans',locales:['zh-Hans']},presets:[['classic',{docs:{sidebarPath:'./sidebars.ts',routeBasePath:'docs'},blog:false,theme:{customCss:'./src/css/custom.css'}}satisfies Preset.Options]],themeConfig:{colorMode:{respectPrefersColorScheme:true},navbar:{title:'Dazi-Learn-Docs',logo:{alt:'Dazi-Learn-Docs',src:'img/logo.svg'},items:[{type:'docSidebar',sidebarId:'learnSidebar',label:'知识模块',position:'left'},{to:'/practice/aws-clf-c02',label:'练习中心',position:'left'},{href:process.env.GITHUB_URL||'https://github.com/',label:'GitHub',position:'right'}]},footer:{style:'dark',links:[{title:'学习',items:[{label:'AWS-CLF-C02',to:'/docs/aws/clf-c02'},{label:'练习中心',to:'/practice/aws-clf-c02'}]}],copyright:`Copyright © ${new Date().getFullYear()} Dazi-Learn-Docs`},prism:{theme:prismThemes.github,darkTheme:prismThemes.dracula}}satisfies Preset.ThemeConfig};export default config;
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+const baseUrl = process.env.BASE_URL || '/';
+const config: Config = {
+  title: 'Dazi-Learn-Docs',
+  tagline: '技术知识与练习平台',
+  favicon: 'img/favicon.ico',
+  future: {v4: true},
+  url: process.env.SITE_URL || 'https://dazi-learn-docs.pages.dev',
+  baseUrl,
+  organizationName: process.env.GITHUB_OWNER || 'weizhiqimail',
+  projectName: 'dazi-learn-docs',
+  trailingSlash: false,
+  onBrokenLinks: 'warn',
+  i18n: {defaultLocale: 'zh-Hans', locales: ['zh-Hans']},
+  presets: [
+    [
+      'classic',
+      {
+        docs: {sidebarPath: './sidebars.ts', routeBasePath: 'docs'},
+        blog: false,
+        theme: {customCss: './src/css/custom.css'},
+      } satisfies Preset.Options,
+    ],
+  ],
+  themeConfig: {
+    colorMode: {respectPrefersColorScheme: true},
+    navbar: {
+      title: 'Dazi-Learn-Docs',
+      logo: {alt: 'Dazi-Learn-Docs', src: 'img/logo.svg'},
+      items: [
+        {type: 'docSidebar', sidebarId: 'learnSidebar', label: '知识模块', position: 'left'},
+        {to: '/practice/aws-clf-c02', label: '练习中心', position: 'left'},
+        {href: process.env.GITHUB_URL || 'https://github.com/', label: 'GitHub', position: 'right'},
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: '学习',
+          items: [
+            {label: 'AWS-CLF-C02', to: '/docs/aws/clf-c02'},
+            {label: '练习中心', to: '/practice/aws-clf-c02'},
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Dazi-Learn-Docs`,
+    },
+    prism: {theme: prismThemes.github, darkTheme: prismThemes.dracula},
+  } satisfies Preset.ThemeConfig,
+};
+export default config;
